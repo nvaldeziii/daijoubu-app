@@ -2,4 +2,6 @@
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">daijoubu-app</string>
+
+  <string name="Icon_Speaker">🔊 (listen button)</string>
 </resources>

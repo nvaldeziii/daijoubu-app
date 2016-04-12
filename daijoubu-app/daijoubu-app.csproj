@@ -57,7 +57,13 @@
     <None Include="GettingStarted.Xamarin" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\Multiple-Choise-Module.axml">
+    <AndroidResource Include="Resources\layout\Module_MultipleChoise.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Module_Typing.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Module_Listening.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
