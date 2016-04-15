@@ -21,7 +21,7 @@ namespace AndroidHelper
         private ActionBarActivity mHostActivity;
         private int mOpenedResource;
         private int mClosedResource;
-        public MyActionBarDrawerToggle(ActionBarActivity host, DrawerLayout drawerLayout, int openedResourse, int closedResource) : base(host,drawerLayout,openedResourse,closedResource)
+        public MyActionBarDrawerToggle(ActionBarActivity host, DrawerLayout drawerLayout, int openedResourse, int closedResource) : base(host, drawerLayout, openedResourse, closedResource)
         {
             mHostActivity = host;
             mOpenedResource = openedResourse;
@@ -31,11 +31,13 @@ namespace AndroidHelper
         public override void OnDrawerOpened(View drawerView)
         {
             base.OnDrawerOpened(drawerView);
+            mHostActivity.SupportActionBar.SetTitle(mOpenedResource);
         }
 
         public override void OnDrawerClosed(View drawerView)
         {
             base.OnDrawerClosed(drawerView);
+            mHostActivity.SupportActionBar.SetTitle(mClosedResource);
         }
 
         public override void OnDrawerSlide(View drawerView, float slideOffset)
