@@ -3191,11 +3191,8 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f050014
 			public const int Hello = 2131034132;
 			
-			// aapt resource value: 0x7f050019
-			public const int Icon_Speaker = 2131034137;
-			
-			// aapt resource value: 0x7f050016
-			public const int TopBarAppName = 2131034134;
+			// aapt resource value: 0x7f050018
+			public const int Icon_Speaker = 2131034136;
 			
 			// aapt resource value: 0x7f050000
 			public const int abc_action_bar_home_description = 2131034112;
@@ -3254,11 +3251,11 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f050012
 			public const int abc_toolbar_collapse_description = 2131034130;
 			
-			// aapt resource value: 0x7f050018
-			public const int closeDrawer = 2131034136;
-			
 			// aapt resource value: 0x7f050017
-			public const int openDrawer = 2131034135;
+			public const int closeDrawer = 2131034135;
+			
+			// aapt resource value: 0x7f050016
+			public const int openDrawer = 2131034134;
 			
 			// aapt resource value: 0x7f050013
 			public const int status_bar_notification_info_overflow = 2131034131;

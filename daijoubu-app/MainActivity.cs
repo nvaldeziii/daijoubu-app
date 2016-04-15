@@ -57,6 +57,7 @@ namespace daijoubu_app
                 );
 
             mDrawerLayout.SetDrawerListener(mDrawerToggle);
+            //SupportActionBar.SetTitle(Resource.String.ApplicationName);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true); //this replace the next' lines code because it is depreciated in 22 
             //SupportActionBar.SetHomeButtonEnabled(true);
             SupportActionBar.SetDisplayShowTitleEnabled(true);

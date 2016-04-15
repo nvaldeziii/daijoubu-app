@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-  <string name="TopBarAppName">Daijoubu</string>
-  
+<resources>  
     <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">daijoubu-app</string>
+    <string name="ApplicationName">Daijoubu</string>
 
   <string name="openDrawer">Drawer Open</string>
   <string name="closeDrawer">Drawer Closed</string>
