@@ -7,14 +7,16 @@ using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
 using AndroidHelper;
+using SupportToolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Support.V7.App;
 
 namespace daijoubu_app
 {
-    [Activity(Label = "daijoubu_app", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity
+    [Activity(Label = "daijoubu_app", MainLauncher = true, Icon = "@drawable/icon", Theme="@style/MainTheme")]
+    public class MainActivity : ActionBarActivity
     {
 
-        
+        private SupportToolbar mToolbar;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -23,45 +25,18 @@ namespace daijoubu_app
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
+            //FragmentTransaction Frag = FragmentManager.BeginTransaction();
 
-            //hard coded
-            SetContentView(Resource.Layout.Menu);
-            ListView Listview_Menu = FindViewById<ListView>(Resource.Id.listView_menu);
-            Listview_Menu.ItemClick += Listview_Menu_ItemClick;
+            //Frag.Add(Resource.Id.FragmentContainer, new MenuFrag(this), "MenuFrag");
+            //Frag.Commit();
 
-            List<string> lvItems = new List<string>();
-            lvItems.Add("Home");
-            lvItems.Add("Multiple Choise");
-            lvItems.Add("Profile");
-            lvItems.Add("Exit");
-
-            ListViewAdapter<string> adapter = new ListViewAdapter<string>(this, lvItems);
-            Listview_Menu.Adapter = adapter;
-            ///////////// --end hard code
-
-
+            //toolbar
+            mToolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(mToolbar);
+           
         }
 
-        private void Listview_Menu_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
-        {
-            switch(e.Position)
-            {
-                case 0:
-                    SetContentView(Resource.Layout.Main);
-                    break;
-                case 1:
-                    SetContentView(Resource.Layout.Module_MultipleChoise);
-                    break;
-                case 2:
-                    SetContentView(Resource.Layout.Profile);
-                    break;
-                case 3:
-                    Intent main = new Intent(Intent.ActionMain);
-                    main.AddCategory(Intent.CategoryHome);
-                    StartActivity(main);
-                    break;
-            }
-        }
+       
     }
 }
 
