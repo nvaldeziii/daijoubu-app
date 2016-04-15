@@ -21,6 +21,8 @@ namespace daijoubu_app
         private MyActionBarDrawerToggle mDrawerToggle;
         private DrawerLayout mDrawerLayout;
         private ListView mLeftDrawer;
+        ListViewAssistant ListviewAssistant;
+        FragmentTransaction Frag;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -37,13 +39,17 @@ namespace daijoubu_app
             mLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
 
             //init leftdrawer items here ####
-            ListViewAssistant ListviewAssistant = new ListViewAssistant(this, mLeftDrawer);
+            ListviewAssistant = new ListViewAssistant(this, mLeftDrawer);
 
-            //FragmentTransaction Frag = FragmentManager.BeginTransaction();
-            //Frag.Add(Resource.Id.FragmentContainer, new MenuFrag(this), "MenuFrag");
-            //Frag.Commit();
+            //make sure fragment is init
+            Frag = FragmentManager.BeginTransaction();
+            Frag.Add(Resource.Id.FragmentContainer, new HomeFrag(), "HomeFrag");
+            Frag.Commit();
 
-            SetSupportActionBar(mToolbar);
+            //Manage The fragment here
+            ListviewAssistant.ItemClick += ListviewAssistant_ItemClick;
+
+                      SetSupportActionBar(mToolbar);
 
             mDrawerToggle = new MyActionBarDrawerToggle(this, mDrawerLayout,
                 Resource.String.openDrawer,     //top bar title when string is opened
@@ -102,6 +108,38 @@ namespace daijoubu_app
 
             base.OnPostCreate(savedInstanceState);
             mDrawerToggle.SyncState();
+        }
+
+        private void ListviewAssistant_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            //lvItems.Add("Home");
+            //lvItems.Add("Multiple Choise");
+            //lvItems.Add("Profile");
+            Console.WriteLine(string.Format("PRESSED KEY!!! -->  {0}", e.Position));
+            switch (e.Position)
+            {
+                case 0:
+                    MainFragmentChanger(new HomeFrag());
+                    
+                    break;
+                case 1:
+                    MainFragmentChanger(new ModuleFrag());
+                    break;
+                case 2:
+                    break;
+            }
+
+            // (done) close drawer toggle when a list item is clicked
+            mDrawerLayout.CloseDrawers();
+        }
+
+        private void MainFragmentChanger(Fragment newFrag)
+        {
+            FragmentTransaction transaction = FragmentManager.BeginTransaction();
+
+            transaction.Replace(Resource.Id.FragmentContainer, newFrag);
+            transaction.AddToBackStack(null);
+            transaction.Commit();
         }
     }
 }

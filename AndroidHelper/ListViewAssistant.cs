@@ -29,13 +29,32 @@ namespace AndroidHelper
             lvItems = new List<string>();
             lvItems.Add("Home");
             lvItems.Add("Multiple Choise");
-            lvItems.Add("Profile");
-            lvItems.Add("Exit");
+            //lvItems.Add("Profile");
+            //lvItems.Add("Exit");
 
             adapter = new ListViewAdapter<string>(_context, lvItems);
             _listview.Adapter = adapter;
+
+            
+            
         }
 
-        
+        private void _listview_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        public EventHandler<AdapterView.ItemClickEventArgs> ItemClick {
+            set
+            {
+                _listview.ItemClick += value;
+            }
+            get
+            {
+                return null;
+            }
+        }
+
+
     }
 }

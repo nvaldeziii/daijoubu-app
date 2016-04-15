@@ -57,6 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HomeFrag.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MenuFrag.cs" />
     <Compile Include="ModuleFrag.cs" />
@@ -83,6 +84,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Menu.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Home.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
