@@ -23,7 +23,7 @@ using AndroidHelper;
 
 namespace daijoubu_app
 {
-    public class FragMenu : Fragment
+    public class FragMenu : Android.Support.V4.App.Fragment
     {
         private View FragView;
 

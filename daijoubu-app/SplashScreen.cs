@@ -20,7 +20,7 @@ namespace daijoubu_app
         {
             base.OnCreate(savedInstanceState);
 
-            Thread.Sleep(4000);
+            //Thread.Sleep(4000);
             StartActivity(typeof(MainActivity));
         }
     }

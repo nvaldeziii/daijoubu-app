@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace daijoubu_app
 {
-    public class FragModule : Fragment
+    public class FragModule : Android.Support.V4.App.Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
