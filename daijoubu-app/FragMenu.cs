@@ -23,12 +23,12 @@ using AndroidHelper;
 
 namespace daijoubu_app
 {
-    public class MenuFrag : Fragment
+    public class FragMenu : Android.Support.V4.App.Fragment
     {
         private View FragView;
 
         Context _context;
-        public MenuFrag(Context context)
+        public FragMenu(Context context)
         {
             _context = context;
         }

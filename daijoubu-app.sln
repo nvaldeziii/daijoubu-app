@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "daijoubu-app", "daijoubu-ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidHelper", "AndroidHelper\AndroidHelper.csproj", "{6CBB3B19-430A-4535-B0F3-FE4265160682}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidAssistant", "AndroidAssistant\AndroidAssistant.csproj", "{6E1CE078-45C0-41DE-971D-C75A1297BC99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{6CBB3B19-430A-4535-B0F3-FE4265160682}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CBB3B19-430A-4535-B0F3-FE4265160682}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CBB3B19-430A-4535-B0F3-FE4265160682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E1CE078-45C0-41DE-971D-C75A1297BC99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E1CE078-45C0-41DE-971D-C75A1297BC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E1CE078-45C0-41DE-971D-C75A1297BC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E1CE078-45C0-41DE-971D-C75A1297BC99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
