@@ -25,7 +25,7 @@ namespace daijoubu_app
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
-            return inflater.Inflate(Resource.Layout.Module_MultipleChoise, container, false);
+            return inflater.Inflate(Resource.Layout.Module_Home, container, false);
             
         }
     }

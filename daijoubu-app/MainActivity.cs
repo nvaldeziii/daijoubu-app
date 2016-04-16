@@ -49,10 +49,10 @@ namespace daijoubu_app
             //make sure fragment is init
             // add all the possible fragments
             MainFragment = new FragmentHelper(new FragHome(),"FragHome", Resource.Id.FragmentContainer);
-            MainFragment.Add(new FragAbout(), "FragAbout");
-            MainFragment.Add(new FragModule(), "FragModule");
-            MainFragment.Add(new FragProfile(), "FragProfile");
-            MainFragment.Add(new FragSettings(), "FragSettings");
+            //MainFragment.Add(new FragAbout(), "FragAbout");
+            //MainFragment.Add(new FragModule(), "FragModule");
+            //MainFragment.Add(new FragProfile(), "FragProfile");
+            //MainFragment.Add(new FragSettings(), "FragSettings");
             MainFragment.FinalizeAdd(SupportFragmentManager.BeginTransaction());
             //Manage The fragment here
             ListviewAssistant.ItemClick += ListviewAssistant_ItemClick;
@@ -137,19 +137,24 @@ namespace daijoubu_app
             switch (e.Position)
             {
                 case 0:
-                    MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragHome");  
+                    // MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragHome");
+                    MainFragment.Replace(new FragHome(), SupportFragmentManager.BeginTransaction());
                     break;
                 case 1:
-                    MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragProfile");
+                    // MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragProfile");
+                    MainFragment.Replace(new FragProfile(), SupportFragmentManager.BeginTransaction());
                     break; 
                 case 2:
-                    MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragModule");
+                    // MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragModule");
+                    MainFragment.Replace(new FragModule(), SupportFragmentManager.BeginTransaction());
                     break;
                 case 3:
-                    MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragSettings");
+                    // MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragSettings");
+                    MainFragment.Replace(new FragSettings(), SupportFragmentManager.BeginTransaction());
                     break;
                 case 4:
-                    MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragAbout");
+                    // MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragAbout");
+                    MainFragment.Replace(new FragAbout(), SupportFragmentManager.BeginTransaction());
                     break;
             }
 

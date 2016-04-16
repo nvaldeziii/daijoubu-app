@@ -56,6 +56,22 @@ namespace AndroidHelper
             Transaction.Commit();
         }
 
+        public void Replace(SupportFragment frag,SupportTransaction m)
+        {
+            if (frag.IsVisible)
+            {
+                return;
+            }
+
+            FragContainer[CurrentFrag] = frag;
+
+            SupportTransaction trans = m;
+            trans.Replace(FrameContainer, FragContainer[CurrentFrag]);
+            trans.Commit();
+
+            
+        }
+
         public void Switch(SupportTransaction m, string tag)
         {
             SupportTransaction Transaction = m;
