@@ -27,7 +27,6 @@ namespace daijoubu_app
         ListViewAssistant ListviewAssistant;
 
         FragmentHelper MainFragment;
-        SupportFragmentManager SFragmanager;
 
         protected override void OnCreate(Bundle bundle)
         {
