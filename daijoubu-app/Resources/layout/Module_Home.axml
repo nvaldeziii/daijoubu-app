@@ -4,18 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <Button
-        android:text="1Button"
+        android:text="Listening"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button1" />
     <Button
-        android:text="22Button"
+        android:text="Mult Choise"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button2" />
     <Button
-        android:text="3Button"
+        android:text="Typing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button3" />
+<!-- module view, used when switching quiz type -->
+    <FrameLayout
+        android:id="@+id/FragmentChildContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

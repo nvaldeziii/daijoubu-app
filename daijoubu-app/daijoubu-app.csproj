@@ -70,6 +70,9 @@
     <Compile Include="FragHome.cs" />
     <Compile Include="FragMenu.cs" />
     <Compile Include="FragModule.cs" />
+    <Compile Include="FragModuleListening.cs" />
+    <Compile Include="FragModuleMultipleChoise.cs" />
+    <Compile Include="FragModuleTyping.cs" />
     <Compile Include="FragProfile.cs" />
     <Compile Include="FragSettings.cs" />
     <Compile Include="MainActivity.cs" />
@@ -118,7 +121,9 @@
     <AndroidResource Include="Resources\drawable\Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AndroidAssistant\AndroidAssistant.csproj">
