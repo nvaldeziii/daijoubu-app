@@ -9,4 +9,9 @@
     <item name="color">#F5F5F5</item>
     <item name="spinBars">true</item>
   </style>
+
+  <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light">
+    <item name="android:windowBackground">@drawable/splash_background</item>
+    <item name="android:windowNoTitle">true</item>
+  </style>
 </resources>

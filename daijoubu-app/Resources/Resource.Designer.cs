@@ -2639,7 +2639,13 @@ namespace daijoubu_app
 			public const int Icon = 2130837573;
 			
 			// aapt resource value: 0x7f020046
-			public const int notification_template_icon_bg = 2130837574;
+			public const int logo = 2130837574;
+			
+			// aapt resource value: 0x7f020048
+			public const int notification_template_icon_bg = 2130837576;
+			
+			// aapt resource value: 0x7f020047
+			public const int splash_background = 2130837575;
 			
 			static Drawable()
 			{
@@ -3710,6 +3716,9 @@ namespace daijoubu_app
 			
 			// aapt resource value: 0x7f080133
 			public const int MainTheme = 2131231027;
+			
+			// aapt resource value: 0x7f080135
+			public const int MyTheme_Splash = 2131231029;
 			
 			// aapt resource value: 0x7f080010
 			public const int Platform_AppCompat = 2131230736;
