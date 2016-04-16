@@ -13,7 +13,7 @@ using Android.Support.V7.App;
 
 namespace daijoubu_app
 {
-    [Activity(Label = "daijoubu_app", MainLauncher = true, Icon = "@drawable/icon", Theme="@style/MainTheme")]
+   [Activity(Label = "daijoubu_app", Theme="@style/MainTheme")]
     public class MainActivity : ActionBarActivity
     {
 
