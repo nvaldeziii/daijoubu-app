@@ -4,13 +4,13 @@
   <string name="Hello">Hello World, Click Me!</string>
   <string name="ApplicationName">Daijoubu</string>
 
-  <string name="openDrawer">Drawer Open</string>
-  <string name="closeDrawer">Drawer Closed</string>
+  <string name="openDrawer">Menu</string>
+  <string name="closeDrawer">--</string>
 
   <!-- Translateable strings -->
   <string name="layout_settings_title">Settings</string>
   <string name="layout_settings_tts_bypass">Bypass TTS installer</string>
   
   <!-- ICON type unicodes -->
-  <string name="Icon_Speaker">🔊 (listen button)</string>
+  <string name="Icon_Speaker">(listen button)</string>
 </resources>
