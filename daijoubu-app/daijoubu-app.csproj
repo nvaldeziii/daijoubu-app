@@ -120,6 +120,10 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AndroidAssistant\AndroidAssistant.csproj">
+      <Project>{6e1ce078-45c0-41de-971d-c75a1297bc99}</Project>
+      <Name>AndroidAssistant</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AndroidHelper\AndroidHelper.csproj">
       <Project>{6cbb3b19-430a-4535-b0f3-fe4265160682}</Project>
       <Name>AndroidHelper</Name>

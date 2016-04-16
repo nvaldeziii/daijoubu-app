@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("AndroidHelper.Resource", IsApplication=false)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("AndroidAssistant.Resource", IsApplication=false)]
 
-namespace AndroidHelper
+namespace AndroidAssistant
 {
 	
 	

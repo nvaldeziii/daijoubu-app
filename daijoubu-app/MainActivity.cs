@@ -12,6 +12,8 @@ using SupportFragmentManager = Android.Support.V4.App.FragmentManager;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 
+using AndroidHelper;
+
 namespace daijoubu_app
 {
    [Activity(Label = "daijoubu_app", Theme="@style/MainTheme")]
