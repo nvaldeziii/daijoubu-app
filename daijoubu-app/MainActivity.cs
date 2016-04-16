@@ -8,6 +8,7 @@ using Android.OS;
 using System.Collections.Generic;
 using AndroidHelper;
 using SupportToolbar = Android.Support.V7.Widget.Toolbar;
+using SupportFragmentManager = Android.Support.V4.App.FragmentManager;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 
@@ -22,7 +23,9 @@ namespace daijoubu_app
         private DrawerLayout mDrawerLayout;
         private ListView mLeftDrawer;
         ListViewAssistant ListviewAssistant;
-        FragmentTransaction Frag;
+
+        FragmentHelper MainFragment;
+        SupportFragmentManager SFragmanager;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -41,11 +44,15 @@ namespace daijoubu_app
             //init leftdrawer items here ####
             ListviewAssistant = new ListViewAssistant(this, mLeftDrawer);
 
+           
             //make sure fragment is init
-            Frag = FragmentManager.BeginTransaction();
-            Frag.Add(Resource.Id.FragmentContainer, new HomeFrag(), "HomeFrag");
-            Frag.Commit();
-
+            // add all the possible fragments
+            MainFragment = new FragmentHelper(new FragHome(),"FragHome", Resource.Id.FragmentContainer);
+            MainFragment.Add(new FragAbout(), "FragAbout");
+            MainFragment.Add(new FragModule(), "FragModule");
+            MainFragment.Add(new FragProfile(), "FragProfile");
+            MainFragment.Add(new FragSettings(), "FragSettings");
+            MainFragment.FinalizeAdd(SupportFragmentManager.BeginTransaction());
             //Manage The fragment here
             ListviewAssistant.ItemClick += ListviewAssistant_ItemClick;
 
@@ -80,7 +87,11 @@ namespace daijoubu_app
             }
         }
 
-
+        /// <summary>
+        /// this is where the action bar clicks are handled
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             mDrawerToggle.OnOptionsItemSelected(item);
@@ -88,7 +99,9 @@ namespace daijoubu_app
         }
 
         /// <summary>
-        /// Saved state
+        /// Saved the current state of the app
+        /// usefull when handling screen orientation as it kind of
+        /// restarts the whole activity
         /// </summary>
         /// <param name="outState"> i have no  idea what this is --noli </param>
         protected override void OnSaveInstanceState(Bundle outState)
@@ -104,6 +117,9 @@ namespace daijoubu_app
             base.OnSaveInstanceState(outState);
         }
 
+        /// <summary>
+        /// Tutorial #48-49 says that just do this
+        /// </summary>
         protected override void OnPostCreate(Bundle savedInstanceState)
         {
 
@@ -111,22 +127,28 @@ namespace daijoubu_app
             mDrawerToggle.SyncState();
         }
 
+        /// <summary>
+        /// Handle the left navigation bar clicks over here
+        /// </summary>
         private void ListviewAssistant_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            //lvItems.Add("Home");
-            //lvItems.Add("Multiple Choise");
-            //lvItems.Add("Profile");
-            Console.WriteLine(string.Format("PRESSED KEY!!! -->  {0}", e.Position));
+
             switch (e.Position)
             {
                 case 0:
-                    MainFragmentChanger(new HomeFrag());
-                    
+                    MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragHome");  
                     break;
                 case 1:
-                    MainFragmentChanger(new ModuleFrag());
-                    break;
+                    MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragProfile");
+                    break; 
                 case 2:
+                    MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragModule");
+                    break;
+                case 3:
+                    MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragSettings");
+                    break;
+                case 4:
+                    MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragAbout");
                     break;
             }
 
@@ -134,14 +156,6 @@ namespace daijoubu_app
             mDrawerLayout.CloseDrawers();
         }
 
-        private void MainFragmentChanger(Fragment newFrag)
-        {
-            FragmentTransaction transaction = FragmentManager.BeginTransaction();
-
-            transaction.Replace(Resource.Id.FragmentContainer, newFrag);
-            transaction.AddToBackStack(null);
-            transaction.Commit();
-        }
     }
 }
 

@@ -49,6 +49,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FragmentHelper.cs" />
     <Compile Include="ListViewAdapter.cs" />
     <Compile Include="ListViewAssistant.cs" />
     <Compile Include="MyActionBarDrawerToggle.cs" />
