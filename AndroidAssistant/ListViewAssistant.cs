@@ -9,31 +9,45 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using AndroidHelper;
 
-namespace AndroidHelper//we will use android helper namespace since the assistant mainly uses helper 
+namespace AndroidAssistant//we will use android helper namespace since the assistant mainly uses helper 
 {
     public class ListViewAssistant
     {
-        Context _context;
+        Context context;
 
-        List<string> lvItems;
+        List<string> ListViewItems;
+        List<string> ListView_FontAwesome;
+
         ListViewAdapter<string> adapter;
 
         ListView _listview;
 
-        public ListViewAssistant(Context context, ListView lv)
+        public ListViewAssistant(Context c, ListView lv)
         {
-            _context = context;
+            context = c;
             _listview = lv;
 
-            lvItems = new List<string>();
-            lvItems.Add("Home");
-            lvItems.Add("Profile");
-            lvItems.Add("Module");
-            lvItems.Add("Settings");
-            lvItems.Add("About");
+            ListViewItems = new List<string>();
+            ListView_FontAwesome = new List<string>();
 
-            adapter = new ListViewAdapter<string>(_context, lvItems);
+            ListViewItems.Add(context.Resources.GetString(Resource.String.listview_home));
+            ListView_FontAwesome.Add( context.Resources.GetString(Resource.String.listview_fa_home) );
+
+            ListViewItems.Add(context.Resources.GetString(Resource.String.listview_profile));
+            ListView_FontAwesome.Add(context.Resources.GetString(Resource.String.listview_fa_profile));
+
+            ListViewItems.Add(context.Resources.GetString(Resource.String.listview_module));
+            ListView_FontAwesome.Add(context.Resources.GetString(Resource.String.listview_fa_module));
+
+            ListViewItems.Add(context.Resources.GetString(Resource.String.listview_settings));
+            ListView_FontAwesome.Add(context.Resources.GetString(Resource.String.listview_fa_settings));
+
+            ListViewItems.Add(context.Resources.GetString(Resource.String.listview_about));
+            ListView_FontAwesome.Add(context.Resources.GetString(Resource.String.listview_fa_about));
+
+            adapter = new ListViewAdapter<string>(context, ListViewItems,ListView_FontAwesome,context);
             _listview.Adapter = adapter;
 
 

@@ -11,6 +11,10 @@
   <string name="layout_settings_title">Settings</string>
   <string name="layout_settings_tts_bypass">Bypass TTS installer</string>
   
+   <!-- font awesome string list -->
+  <string name="fa_home">&#xf015;</string>
+ 
+
   <!-- ICON type unicodes -->
   <string name="Icon_Speaker">(listen button)</string>
 </resources>

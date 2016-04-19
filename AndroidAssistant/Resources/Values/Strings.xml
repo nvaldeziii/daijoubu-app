@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">$projectname$</string>
+  <string name="ApplicationName">$projectname$</string>
+  
+  <!-- Translatable strings -->
+  <string name="listview_home">Home</string>
+  <string name="listview_profile">Profile</string>
+  <string name="listview_module">Module</string>
+  <string name="listview_settings">Settings</string>
+  <string name="listview_about">About</string>
+  
+  
+<!-- FontAwesome
+      getmore at: http://fortawesome.github.io/Font-Awesome/cheatsheet/
+-->
+  <string name="listview_fa_home">&#xf015;</string> <!-- fa home -->
+  <string name="listview_fa_profile">&#xf007;</string> <!-- fa-user -->
+  <string name="listview_fa_module">&#xf02d;</string> <!-- fa-book -->
+  <string name="listview_fa_settings">&#xf013;</string> <!-- fa-gear -->
+  <string name="listview_fa_about">&#xf059;</string> <!-- fa-question-circle -->
 </resources>
