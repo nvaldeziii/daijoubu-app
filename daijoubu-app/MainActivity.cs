@@ -6,7 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
-using AndroidHelper;
+
 using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 using SupportFragmentManager = Android.Support.V4.App.FragmentManager;
 using Android.Support.V4.Widget;
@@ -20,7 +20,9 @@ using Android.Graphics;
 namespace daijoubu_app
 {
    [Activity(Label = "daijoubu_app", Theme="@style/MainTheme")]
+#pragma warning disable CS0618
     public class MainActivity : ActionBarActivity
+#pragma warning restore CS0618
     {
 
         private SupportToolbar mToolbar;

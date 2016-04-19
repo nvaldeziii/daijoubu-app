@@ -18,7 +18,9 @@ namespace AndroidHelper
 {
     public class MyActionBarDrawerToggle : SupportActionBarDrawerToggle
     {
+#pragma warning disable CS0618
         private ActionBarActivity mHostActivity;
+
         private int mOpenedResource;
         private int mClosedResource;
         public MyActionBarDrawerToggle(ActionBarActivity host, DrawerLayout drawerLayout, int openedResourse, int closedResource) : base(host, drawerLayout, openedResourse, closedResource)
@@ -44,5 +46,6 @@ namespace AndroidHelper
         {
             base.OnDrawerSlide(drawerView, slideOffset);
         }
+#pragma warning restore CS0618
     }
 }
