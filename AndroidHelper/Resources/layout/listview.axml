@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
     <TextView
+        android:text="ico"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ListItem_fa"
+        android:layout_weight="0.8"
+        android:layout_gravity="left"
+        android:minHeight="40dp"
+        android:gravity="right|center_vertical"
+        android:layout_marginRight="15dp" />
+    <TextView
         android:text="List Item"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ListItem" />
+        android:id="@+id/ListItem"
+        android:layout_weight="0.2"
+        android:minHeight="40dp"
+        android:gravity="center_vertical" />
 </LinearLayout>

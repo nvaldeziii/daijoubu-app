@@ -11,19 +11,32 @@ using Android.App;
 using Android.Runtime;
 
 using Android.OS;
-
+using Android.Graphics;
 
 namespace AndroidHelper
 {
     public class ListViewAdapter<T> : BaseAdapter<T>
     {
-        Context _context;
-        List<T> _items;
+        Context context;
+        List<T> items;
+        List<string> FontAwesome;
 
-        public ListViewAdapter(Context context, List<T> items)
+   
+
+        public ListViewAdapter(Context c, List<T> listitem)
         {
-            _items = items;
-            _context = context;
+            items = listitem;
+            context = c;
+        }
+
+        public ListViewAdapter(Context context, List<T> items, List<string> fontawesome, Context c)
+        {
+            this.items = items;
+            this.context = c;
+            if(this.items.Count == fontawesome.Count)
+            {
+                FontAwesome = fontawesome;
+            }
         }
 
         public override View GetView(int position, View convertView, ViewGroup parent)
@@ -31,20 +44,35 @@ namespace AndroidHelper
             View row = convertView;
             if (row == null)
             {
-                row = LayoutInflater.From(_context).Inflate(Resource.Layout.listview, null, false);
+                row = LayoutInflater.From(context).Inflate(Resource.Layout.listview, null, false);
             }
             TextView item = row.FindViewById<TextView>(Resource.Id.ListItem);
-            item.Text = _items[position].ToString();
+            TextView fa = row.FindViewById<TextView>(Resource.Id.ListItem_fa);
 
+            item.Text = items[position].ToString();
+            if (FontAwesome != null)
+            {
+
+                Typeface font = Typeface.CreateFromAsset(context.Assets, "FontAwesome.ttf");
+                fa.Text = FontAwesome[position];
+                fa.SetTypeface(font, TypefaceStyle.Normal);
+            }
+            else
+            {
+                fa.Text = " ";
+                //fa.Visibility = Android.Views.ViewStates.Gone;
+            }
             return row;
         }
+
+        
 
         #region Required
         public override T this[int position]
         {
             get
             {
-                return _items[position];
+                return items[position];
             }
         }
 
@@ -52,7 +80,7 @@ namespace AndroidHelper
         {
             get
             {
-                return _items.Count;
+                return items.Count;
             }
         }
 

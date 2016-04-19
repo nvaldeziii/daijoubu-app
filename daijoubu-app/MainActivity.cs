@@ -12,7 +12,10 @@ using SupportFragmentManager = Android.Support.V4.App.FragmentManager;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 
+using AndroidAssistant;
 using AndroidHelper;
+
+using Android.Graphics;
 
 namespace daijoubu_app
 {
@@ -48,7 +51,7 @@ namespace daijoubu_app
            
             //make sure fragment is init
             // add all the possible fragments
-            MainFragment = new FragmentHelper(new FragHome(),"FragHome", Resource.Id.FragmentContainer);
+            MainFragment = new FragmentHelper(new FragHome(this),"FragHome", Resource.Id.FragmentContainer);
             //MainFragment.Add(new FragAbout(), "FragAbout");
             //MainFragment.Add(new FragModule(), "FragModule");
             //MainFragment.Add(new FragProfile(), "FragProfile");
@@ -86,6 +89,8 @@ namespace daijoubu_app
             {
                 SupportActionBar.SetTitle(Resource.String.ApplicationName);
             }
+
+            
         }
 
         /// <summary>
@@ -138,7 +143,7 @@ namespace daijoubu_app
             {
                 case 0:
                     // MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragHome");
-                    MainFragment.Replace(new FragHome(), SupportFragmentManager.BeginTransaction());
+                    MainFragment.Replace(new FragHome(this), SupportFragmentManager.BeginTransaction());
                     break;
                 case 1:
                     // MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragProfile");

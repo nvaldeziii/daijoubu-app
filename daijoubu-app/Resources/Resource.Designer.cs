@@ -466,6 +466,7 @@ namespace daijoubu_app
 			global::AndroidAssistant.Resource.Drawable.abc_textfield_search_material = global::daijoubu_app.Resource.Drawable.abc_textfield_search_material;
 			global::AndroidAssistant.Resource.Drawable.notification_template_icon_bg = global::daijoubu_app.Resource.Drawable.notification_template_icon_bg;
 			global::AndroidAssistant.Resource.Id.ListItem = global::daijoubu_app.Resource.Id.ListItem;
+			global::AndroidAssistant.Resource.Id.ListItem_fa = global::daijoubu_app.Resource.Id.ListItem_fa;
 			global::AndroidAssistant.Resource.Id.action0 = global::daijoubu_app.Resource.Id.action0;
 			global::AndroidAssistant.Resource.Id.action_bar = global::daijoubu_app.Resource.Id.action_bar;
 			global::AndroidAssistant.Resource.Id.action_bar_activity_content = global::daijoubu_app.Resource.Id.action_bar_activity_content;
@@ -623,6 +624,16 @@ namespace daijoubu_app
 			global::AndroidAssistant.Resource.String.abc_shareactionprovider_share_with = global::daijoubu_app.Resource.String.abc_shareactionprovider_share_with;
 			global::AndroidAssistant.Resource.String.abc_shareactionprovider_share_with_application = global::daijoubu_app.Resource.String.abc_shareactionprovider_share_with_application;
 			global::AndroidAssistant.Resource.String.abc_toolbar_collapse_description = global::daijoubu_app.Resource.String.abc_toolbar_collapse_description;
+			global::AndroidAssistant.Resource.String.listview_about = global::daijoubu_app.Resource.String.listview_about;
+			global::AndroidAssistant.Resource.String.listview_fa_about = global::daijoubu_app.Resource.String.listview_fa_about;
+			global::AndroidAssistant.Resource.String.listview_fa_home = global::daijoubu_app.Resource.String.listview_fa_home;
+			global::AndroidAssistant.Resource.String.listview_fa_module = global::daijoubu_app.Resource.String.listview_fa_module;
+			global::AndroidAssistant.Resource.String.listview_fa_profile = global::daijoubu_app.Resource.String.listview_fa_profile;
+			global::AndroidAssistant.Resource.String.listview_fa_settings = global::daijoubu_app.Resource.String.listview_fa_settings;
+			global::AndroidAssistant.Resource.String.listview_home = global::daijoubu_app.Resource.String.listview_home;
+			global::AndroidAssistant.Resource.String.listview_module = global::daijoubu_app.Resource.String.listview_module;
+			global::AndroidAssistant.Resource.String.listview_profile = global::daijoubu_app.Resource.String.listview_profile;
+			global::AndroidAssistant.Resource.String.listview_settings = global::daijoubu_app.Resource.String.listview_settings;
 			global::AndroidAssistant.Resource.String.status_bar_notification_info_overflow = global::daijoubu_app.Resource.String.status_bar_notification_info_overflow;
 			global::AndroidAssistant.Resource.Style.AlertDialog_AppCompat = global::daijoubu_app.Resource.Style.AlertDialog_AppCompat;
 			global::AndroidAssistant.Resource.Style.AlertDialog_AppCompat_Light = global::daijoubu_app.Resource.Style.AlertDialog_AppCompat_Light;
@@ -1691,6 +1702,7 @@ namespace daijoubu_app
 			global::AndroidHelper.Resource.Drawable.abc_textfield_search_material = global::daijoubu_app.Resource.Drawable.abc_textfield_search_material;
 			global::AndroidHelper.Resource.Drawable.notification_template_icon_bg = global::daijoubu_app.Resource.Drawable.notification_template_icon_bg;
 			global::AndroidHelper.Resource.Id.ListItem = global::daijoubu_app.Resource.Id.ListItem;
+			global::AndroidHelper.Resource.Id.ListItem_fa = global::daijoubu_app.Resource.Id.ListItem_fa;
 			global::AndroidHelper.Resource.Id.action0 = global::daijoubu_app.Resource.Id.action0;
 			global::AndroidHelper.Resource.Id.action_bar = global::daijoubu_app.Resource.Id.action_bar;
 			global::AndroidHelper.Resource.Id.action_bar_activity_content = global::daijoubu_app.Resource.Id.action_bar_activity_content;
@@ -3885,17 +3897,20 @@ namespace daijoubu_app
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0b005b
-			public const int FragmentChildContainer = 2131427419;
+			// aapt resource value: 0x7f0b005d
+			public const int FragmentChildContainer = 2131427421;
 			
-			// aapt resource value: 0x7f0b0054
-			public const int FragmentContainer = 2131427412;
+			// aapt resource value: 0x7f0b0056
+			public const int FragmentContainer = 2131427414;
 			
-			// aapt resource value: 0x7f0b0051
-			public const int ListItem = 2131427409;
+			// aapt resource value: 0x7f0b0053
+			public const int ListItem = 2131427411;
 			
-			// aapt resource value: 0x7f0b0068
-			public const int action0 = 2131427432;
+			// aapt resource value: 0x7f0b0052
+			public const int ListItem_fa = 2131427410;
+			
+			// aapt resource value: 0x7f0b006a
+			public const int action0 = 2131427434;
 			
 			// aapt resource value: 0x7f0b0041
 			public const int action_bar = 2131427393;
@@ -3921,8 +3936,8 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f0b0042
 			public const int action_context_bar = 2131427394;
 			
-			// aapt resource value: 0x7f0b006c
-			public const int action_divider = 2131427436;
+			// aapt resource value: 0x7f0b006e
+			public const int action_divider = 2131427438;
 			
 			// aapt resource value: 0x7f0b0002
 			public const int action_menu_divider = 2131427330;
@@ -3951,38 +3966,41 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f0b0018
 			public const int beginning = 2131427352;
 			
-			// aapt resource value: 0x7f0b0058
-			public const int button1 = 2131427416;
-			
-			// aapt resource value: 0x7f0b0059
-			public const int button2 = 2131427417;
-			
 			// aapt resource value: 0x7f0b005a
-			public const int button3 = 2131427418;
+			public const int button1 = 2131427418;
+			
+			// aapt resource value: 0x7f0b005b
+			public const int button2 = 2131427419;
+			
+			// aapt resource value: 0x7f0b005c
+			public const int button3 = 2131427420;
 			
 			// aapt resource value: 0x7f0b002b
 			public const int buttonPanel = 2131427371;
 			
-			// aapt resource value: 0x7f0b0062
-			public const int button_mc_q1 = 2131427426;
-			
-			// aapt resource value: 0x7f0b0063
-			public const int button_mc_q2 = 2131427427;
-			
 			// aapt resource value: 0x7f0b0064
-			public const int button_mc_q3 = 2131427428;
+			public const int button_mc_q1 = 2131427428;
 			
 			// aapt resource value: 0x7f0b0065
-			public const int button_mc_q4 = 2131427429;
+			public const int button_mc_q2 = 2131427429;
 			
-			// aapt resource value: 0x7f0b0069
-			public const int cancel_action = 2131427433;
+			// aapt resource value: 0x7f0b0066
+			public const int button_mc_q3 = 2131427430;
+			
+			// aapt resource value: 0x7f0b0067
+			public const int button_mc_q4 = 2131427431;
+			
+			// aapt resource value: 0x7f0b0051
+			public const int button_test = 2131427409;
+			
+			// aapt resource value: 0x7f0b006b
+			public const int cancel_action = 2131427435;
 			
 			// aapt resource value: 0x7f0b0039
 			public const int checkbox = 2131427385;
 			
-			// aapt resource value: 0x7f0b006f
-			public const int chronometer = 2131427439;
+			// aapt resource value: 0x7f0b0071
+			public const int chronometer = 2131427441;
 			
 			// aapt resource value: 0x7f0b001c
 			public const int collapseActionView = 2131427356;
@@ -4005,11 +4023,11 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f0b000c
 			public const int disableHome = 2131427340;
 			
-			// aapt resource value: 0x7f0b0053
-			public const int drawer_layout = 2131427411;
+			// aapt resource value: 0x7f0b0055
+			public const int drawer_layout = 2131427413;
 			
-			// aapt resource value: 0x7f0b0067
-			public const int editText1 = 2131427431;
+			// aapt resource value: 0x7f0b0069
+			public const int editText1 = 2131427433;
 			
 			// aapt resource value: 0x7f0b0043
 			public const int edit_query = 2131427395;
@@ -4017,8 +4035,8 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f0b0019
 			public const int end = 2131427353;
 			
-			// aapt resource value: 0x7f0b0074
-			public const int end_padder = 2131427444;
+			// aapt resource value: 0x7f0b0076
+			public const int end_padder = 2131427446;
 			
 			// aapt resource value: 0x7f0b0025
 			public const int expand_activities_button = 2131427365;
@@ -4041,38 +4059,38 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f0b0026
 			public const int image = 2131427366;
 			
+			// aapt resource value: 0x7f0b0075
+			public const int info = 2131427445;
+			
+			// aapt resource value: 0x7f0b0057
+			public const int left_drawer = 2131427415;
+			
+			// aapt resource value: 0x7f0b006f
+			public const int line1 = 2131427439;
+			
 			// aapt resource value: 0x7f0b0073
-			public const int info = 2131427443;
-			
-			// aapt resource value: 0x7f0b0055
-			public const int left_drawer = 2131427413;
-			
-			// aapt resource value: 0x7f0b006d
-			public const int line1 = 2131427437;
-			
-			// aapt resource value: 0x7f0b0071
-			public const int line3 = 2131427441;
+			public const int line3 = 2131427443;
 			
 			// aapt resource value: 0x7f0b0009
 			public const int listMode = 2131427337;
 			
-			// aapt resource value: 0x7f0b0057
-			public const int listView_menu = 2131427415;
+			// aapt resource value: 0x7f0b0059
+			public const int listView_menu = 2131427417;
 			
 			// aapt resource value: 0x7f0b0028
 			public const int list_item = 2131427368;
 			
-			// aapt resource value: 0x7f0b005c
-			public const int listening_button_speaker = 2131427420;
-			
 			// aapt resource value: 0x7f0b005e
-			public const int listening_editText_answer = 2131427422;
+			public const int listening_button_speaker = 2131427422;
 			
-			// aapt resource value: 0x7f0b005d
-			public const int listening_space1 = 2131427421;
+			// aapt resource value: 0x7f0b0060
+			public const int listening_editText_answer = 2131427424;
 			
-			// aapt resource value: 0x7f0b006b
-			public const int media_actions = 2131427435;
+			// aapt resource value: 0x7f0b005f
+			public const int listening_space1 = 2131427423;
+			
+			// aapt resource value: 0x7f0b006d
+			public const int media_actions = 2131427437;
 			
 			// aapt resource value: 0x7f0b001a
 			public const int middle = 2131427354;
@@ -4158,11 +4176,11 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f0b0011
 			public const int showTitle = 2131427345;
 			
-			// aapt resource value: 0x7f0b0061
-			public const int space_item_bottom = 2131427425;
+			// aapt resource value: 0x7f0b0063
+			public const int space_item_bottom = 2131427427;
 			
-			// aapt resource value: 0x7f0b005f
-			public const int space_item_top = 2131427423;
+			// aapt resource value: 0x7f0b0061
+			public const int space_item_top = 2131427425;
 			
 			// aapt resource value: 0x7f0b002c
 			public const int spacer = 2131427372;
@@ -4179,23 +4197,23 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f0b0017
 			public const int src_over = 2131427351;
 			
-			// aapt resource value: 0x7f0b006a
-			public const int status_bar_latest_event_content = 2131427434;
+			// aapt resource value: 0x7f0b006c
+			public const int status_bar_latest_event_content = 2131427436;
 			
 			// aapt resource value: 0x7f0b004c
 			public const int submit_area = 2131427404;
 			
-			// aapt resource value: 0x7f0b0075
-			public const int switch1 = 2131427445;
+			// aapt resource value: 0x7f0b0077
+			public const int switch1 = 2131427447;
 			
 			// aapt resource value: 0x7f0b000b
 			public const int tabMode = 2131427339;
 			
-			// aapt resource value: 0x7f0b0072
-			public const int text = 2131427442;
+			// aapt resource value: 0x7f0b0074
+			public const int text = 2131427444;
 			
-			// aapt resource value: 0x7f0b0070
-			public const int text2 = 2131427440;
+			// aapt resource value: 0x7f0b0072
+			public const int text2 = 2131427442;
 			
 			// aapt resource value: 0x7f0b0034
 			public const int textSpacerNoButtons = 2131427380;
@@ -4203,17 +4221,17 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f0b0050
 			public const int textView1 = 2131427408;
 			
-			// aapt resource value: 0x7f0b0066
-			public const int textView_item = 2131427430;
+			// aapt resource value: 0x7f0b0068
+			public const int textView_item = 2131427432;
 			
-			// aapt resource value: 0x7f0b0056
-			public const int textView_label = 2131427414;
+			// aapt resource value: 0x7f0b0058
+			public const int textView_label = 2131427416;
 			
-			// aapt resource value: 0x7f0b0060
-			public const int textView_mc_item = 2131427424;
+			// aapt resource value: 0x7f0b0062
+			public const int textView_mc_item = 2131427426;
 			
-			// aapt resource value: 0x7f0b006e
-			public const int time = 2131427438;
+			// aapt resource value: 0x7f0b0070
+			public const int time = 2131427440;
 			
 			// aapt resource value: 0x7f0b002a
 			public const int title = 2131427370;
@@ -4221,8 +4239,8 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f0b002f
 			public const int title_template = 2131427375;
 			
-			// aapt resource value: 0x7f0b0052
-			public const int toolbar = 2131427410;
+			// aapt resource value: 0x7f0b0054
+			public const int toolbar = 2131427412;
 			
 			// aapt resource value: 0x7f0b002e
 			public const int topPanel = 2131427374;
@@ -4440,8 +4458,8 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f050014
 			public const int Hello = 2131034132;
 			
-			// aapt resource value: 0x7f05001a
-			public const int Icon_Speaker = 2131034138;
+			// aapt resource value: 0x7f050025
+			public const int Icon_Speaker = 2131034149;
 			
 			// aapt resource value: 0x7f050000
 			public const int abc_action_bar_home_description = 2131034112;
@@ -4500,17 +4518,50 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f050012
 			public const int abc_toolbar_collapse_description = 2131034130;
 			
-			// aapt resource value: 0x7f050017
-			public const int closeDrawer = 2131034135;
+			// aapt resource value: 0x7f050021
+			public const int closeDrawer = 2131034145;
 			
-			// aapt resource value: 0x7f050018
-			public const int layout_settings_title = 2131034136;
+			// aapt resource value: 0x7f050024
+			public const int fa_home = 2131034148;
 			
-			// aapt resource value: 0x7f050019
-			public const int layout_settings_tts_bypass = 2131034137;
+			// aapt resource value: 0x7f050022
+			public const int layout_settings_title = 2131034146;
+			
+			// aapt resource value: 0x7f050023
+			public const int layout_settings_tts_bypass = 2131034147;
+			
+			// aapt resource value: 0x7f05001a
+			public const int listview_about = 2131034138;
+			
+			// aapt resource value: 0x7f05001f
+			public const int listview_fa_about = 2131034143;
+			
+			// aapt resource value: 0x7f05001b
+			public const int listview_fa_home = 2131034139;
+			
+			// aapt resource value: 0x7f05001d
+			public const int listview_fa_module = 2131034141;
+			
+			// aapt resource value: 0x7f05001c
+			public const int listview_fa_profile = 2131034140;
+			
+			// aapt resource value: 0x7f05001e
+			public const int listview_fa_settings = 2131034142;
 			
 			// aapt resource value: 0x7f050016
-			public const int openDrawer = 2131034134;
+			public const int listview_home = 2131034134;
+			
+			// aapt resource value: 0x7f050018
+			public const int listview_module = 2131034136;
+			
+			// aapt resource value: 0x7f050017
+			public const int listview_profile = 2131034135;
+			
+			// aapt resource value: 0x7f050019
+			public const int listview_settings = 2131034137;
+			
+			// aapt resource value: 0x7f050020
+			public const int openDrawer = 2131034144;
 			
 			// aapt resource value: 0x7f050013
 			public const int status_bar_notification_info_overflow = 2131034131;
