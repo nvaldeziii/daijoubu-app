@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Bussiness.Resource", IsApplication=false)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("SimpleTTS.Resource", IsApplication=false)]
 
-namespace Bussiness
+namespace SimpleTTS
 {
 	
 	

@@ -2488,8 +2488,8 @@ namespace daijoubu_app
 			global::AndroidHelper.Resource.Styleable.ViewStubCompat_android_id = global::daijoubu_app.Resource.Styleable.ViewStubCompat_android_id;
 			global::AndroidHelper.Resource.Styleable.ViewStubCompat_android_inflatedId = global::daijoubu_app.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::AndroidHelper.Resource.Styleable.ViewStubCompat_android_layout = global::daijoubu_app.Resource.Styleable.ViewStubCompat_android_layout;
-			global::Bussiness.Resource.String.ApplicationName = global::daijoubu_app.Resource.String.ApplicationName;
-			global::Bussiness.Resource.String.Hello = global::daijoubu_app.Resource.String.Hello;
+			global::SimpleTTS.Resource.String.ApplicationName = global::daijoubu_app.Resource.String.ApplicationName;
+			global::SimpleTTS.Resource.String.Hello = global::daijoubu_app.Resource.String.Hello;
 		}
 		
 		public partial class Animation

@@ -17,4 +17,8 @@
 
   <!-- ICON type unicodes -->
   <string name="Icon_Speaker">(listen button)</string>
+  
+  <!-- test strings -->
+  <string name="Test_speak">こんにちは</string>
+  
 </resources>
