@@ -18,4 +18,8 @@
   <string name="listview_fa_module">&#xf02d;</string> <!-- fa-book -->
   <string name="listview_fa_settings">&#xf013;</string> <!-- fa-gear -->
   <string name="listview_fa_about">&#xf059;</string> <!-- fa-question-circle -->
+
+
+  <!-- technical strings (avoid changing)-->
+  
 </resources>

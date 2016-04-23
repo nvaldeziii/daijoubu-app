@@ -2488,6 +2488,8 @@ namespace daijoubu_app
 			global::AndroidHelper.Resource.Styleable.ViewStubCompat_android_id = global::daijoubu_app.Resource.Styleable.ViewStubCompat_android_id;
 			global::AndroidHelper.Resource.Styleable.ViewStubCompat_android_inflatedId = global::daijoubu_app.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::AndroidHelper.Resource.Styleable.ViewStubCompat_android_layout = global::daijoubu_app.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Bussiness.Resource.String.ApplicationName = global::daijoubu_app.Resource.String.ApplicationName;
+			global::Bussiness.Resource.String.Hello = global::daijoubu_app.Resource.String.Hello;
 		}
 		
 		public partial class Animation
@@ -4460,6 +4462,9 @@ namespace daijoubu_app
 			
 			// aapt resource value: 0x7f050025
 			public const int Icon_Speaker = 2131034149;
+			
+			// aapt resource value: 0x7f050026
+			public const int Test_speak = 2131034150;
 			
 			// aapt resource value: 0x7f050000
 			public const int abc_action_bar_home_description = 2131034112;
