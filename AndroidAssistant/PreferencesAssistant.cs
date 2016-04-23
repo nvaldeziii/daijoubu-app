@@ -14,18 +14,24 @@ using Android.Support.V4;
 
 namespace AndroidAssistant
 {
+    /// <summary>
+    /// Loads all the application resources that is needed
+    /// </summary>
     public class PreferencesAssistant 
     {
+        //Xamarin Android Tutorial 33 Shared Preferences
         ISharedPreferences Prefs;
         ISharedPreferencesEditor PrefsEditor;
+
         public PreferencesAssistant()
         {
             Prefs = Application.Context.GetSharedPreferences(ApplicationPreferenceTag, FileCreationMode.Private);
             PrefsEditor = Prefs.Edit();
-
-
         }
 
+        /// <summary>
+        /// Whether to bypass TTS installer notice
+        /// </summary>
         public bool TTSInstallerBypass  {
             get
             {
@@ -38,6 +44,9 @@ namespace AndroidAssistant
             }
         }
 
+        /// <summary>
+        /// How fast the speech is spoken
+        /// </summary>
         public float TTSRate
         {
             get
@@ -52,6 +61,9 @@ namespace AndroidAssistant
             }
         }
 
+        /// <summary>
+        /// adjust the pitch of the voice
+        /// </summary>
         public float TTSPitch
         {
             get

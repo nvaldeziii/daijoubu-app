@@ -228,6 +228,16 @@ namespace SimpleTTS
                 textToSpeech.SetLanguage(lang);
         }
 
+        /// <summary>
+        /// checks whether tts engine is talking
+        /// </summary>
+        public bool IsSpeaking
+        {
+            get
+            {
+                return textToSpeech.IsSpeaking;
+            }
+        }
 
         /*
          * make sure to override OnActivityResult on the calling class

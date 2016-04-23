@@ -54,11 +54,6 @@ namespace AndroidAssistant//we will use android helper namespace since the assis
 
         }
 
-        private void _listview_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         public EventHandler<AdapterView.ItemClickEventArgs> ItemClick
         {
             set

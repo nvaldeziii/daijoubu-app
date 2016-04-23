@@ -23,6 +23,12 @@ namespace AndroidHelper
         List<SupportFragment> FragContainer;
         List<string> FragTag;
 
+        /// <summary>
+        /// Simplify handling of fragments
+        /// </summary>
+        /// <param name="initialfrag">The first Fragment to load</param>
+        /// <param name="tag">Name of the fragment</param>
+        /// <param name="container">Container to put the fragment in this handler</param>
         public FragmentHelper(SupportFragment initialfrag, string tag,int container)
         {
 
@@ -38,12 +44,21 @@ namespace AndroidHelper
          
         }
 
+        /// <summary>
+        /// Add a fragment to the list
+        /// </summary>
+        /// <param name="frag">the fragment to add</param>
+        /// <param name="tag">name of the fragment</param>
         public void Add(SupportFragment frag, string tag)
         {
             FragContainer.Add(frag);
             FragTag.Add(tag); 
         }
 
+        /// <summary>
+        /// Finalize the addition of fragments
+        /// </summary>
+        /// <param name="m">pass a transaction</param>
         public void FinalizeAdd(SupportTransaction m)
         {
             SupportTransaction Transaction = m;
@@ -56,6 +71,11 @@ namespace AndroidHelper
             Transaction.Commit();
         }
 
+        /// <summary>
+        /// replace the current fragment in the Fragment Container
+        /// </summary>
+        /// <param name="frag">The fragment to replace</param>
+        /// <param name="m">Pass a Support Transaction</param>
         public void Replace(SupportFragment frag,SupportTransaction m)
         {
             if (frag.IsVisible)
@@ -72,6 +92,11 @@ namespace AndroidHelper
             
         }
 
+        /// <summary>
+        /// Switch a fragment from the list
+        /// </summary>
+        /// <param name="m"> pass a transaction </param>
+        /// <param name="tag">name of the tag from the list</param>
         public void Switch(SupportTransaction m, string tag)
         {
             SupportTransaction Transaction = m;
@@ -84,12 +109,17 @@ namespace AndroidHelper
             Transaction.Commit();
            
         }
-
+        /// <summary>
+        /// Switch a fragment from the list
+        /// </summary>
+        /// <param name="m"> pass a transaction </param>
+        /// <param name="tag">name of the tag from the list</param>
+        /// <param name="IsAddToStack"> if the previous fragment will be added to stack </param>
         public void Switch(SupportTransaction m,string tag, bool IsAddToStack)
         {
             SupportTransaction Transaction = m;
-
-            Transaction.Hide(FragContainer[CurrentFrag]);
+            if (FragContainer[CurrentFrag] != null)
+                Transaction.Hide(FragContainer[CurrentFrag]);
             Transaction.Show(FragContainer[FragTag.IndexOf(tag)]);
             CurrentFrag = FragTag.IndexOf(tag);
             if (IsAddToStack)

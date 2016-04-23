@@ -15,8 +15,10 @@ namespace daijoubu_app
 {
     public class FragModuleListening : Android.Support.V4.App.Fragment
     {
+        //Loaded prefs is where all application assets are loaded
         AndroidAssistant.LoadedPreferences LoadedPrefs;
         SimpleTTS.SimpleAndroidTTS JapaneseTTS;
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -37,6 +39,9 @@ namespace daijoubu_app
             return view;
         }
 
+        /// <summary>
+        /// Just a test function
+        /// </summary>
         private void Listening_button_speaker_Click(object sender, EventArgs e)
         {
             string what = Context.ApplicationContext.Resources.GetString(Resource.String.Test_speak);

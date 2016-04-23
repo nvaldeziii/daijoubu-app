@@ -22,6 +22,11 @@ namespace AndroidAssistant
             Prefs = new PreferencesAssistant();
         }
 
+        /// <summary>
+        /// Loads the Japanese TTS needed for listening modules
+        /// </summary>
+        /// <param name="a">Pass the caller activity</param>
+        /// <returns></returns>
         public SimpleTTS.SimpleAndroidTTS GetJapaneseTTS(Activity a)
         {
             if (JapaneseTTS == null)
