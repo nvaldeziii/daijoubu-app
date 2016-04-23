@@ -54,10 +54,7 @@ namespace daijoubu_app
             //make sure fragment is init
             // add all the possible fragments
             MainFragment = new FragmentHelper(new FragHome(),"FragHome", Resource.Id.FragmentContainer);
-            //MainFragment.Add(new FragAbout(), "FragAbout");
-            //MainFragment.Add(new FragModule(), "FragModule");
-            //MainFragment.Add(new FragProfile(), "FragProfile");
-            //MainFragment.Add(new FragSettings(), "FragSettings");
+
             MainFragment.FinalizeAdd(SupportFragmentManager.BeginTransaction());
             //Manage The fragment here
             ListviewAssistant.ItemClick += ListviewAssistant_ItemClick;
