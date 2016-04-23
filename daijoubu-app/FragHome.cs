@@ -16,12 +16,6 @@ namespace daijoubu_app
 {
     public class FragHome : Android.Support.V4.App.Fragment
     {
-        Context context;
-        public FragHome(Context c)
-        {
-            context = c;
-        }
-
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -38,7 +32,6 @@ namespace daijoubu_app
             View view = inflater.Inflate(Resource.Layout.Home, container, false);
 
             //test codes
-            
 
             return view;
 
