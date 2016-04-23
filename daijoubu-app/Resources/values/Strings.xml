@@ -9,7 +9,10 @@
 
   <!-- Translateable strings -->
   <string name="layout_settings_title">Settings</string>
+  <string name="layout_settings_tts_title">Text to Speech Settings</string>
   <string name="layout_settings_tts_bypass">Bypass TTS installer</string>
+  <string name="layout_settings_tts_rate">Rate</string>
+  <string name="layout_settings_tts_pitch">Pitch</string>
   
    <!-- font awesome string list -->
   <string name="fa_home">&#xf015;</string>

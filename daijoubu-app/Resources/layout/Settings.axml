@@ -9,10 +9,60 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1" />
+    <TextView
+        android:text="@string/layout_settings_tts_title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_marginLeft="20dp" />
     <Switch
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="41.0dp"
-        android:id="@+id/switch1"
+        android:id="@+id/settings_tts_bypass_switch"
         android:text="@string/layout_settings_tts_bypass"
-        android:paddingLeft="20dp" />
+        android:layout_marginLeft="40dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:text="@string/layout_settings_tts_rate"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_height="match_parent"
+            android:id="@+id/textView3"
+            android:layout_marginLeft="40dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.5" />
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:id="@+id/settings_tts_rate_seekBar"
+            android:max="100" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:text="@string/layout_settings_tts_pitch"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:id="@+id/textView4"
+            android:layout_marginLeft="40dp" />
+        <SeekBar
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:id="@+id/settings_tts_pitch_seekBar"
+            android:max="100" />
+    </LinearLayout>
 </LinearLayout>

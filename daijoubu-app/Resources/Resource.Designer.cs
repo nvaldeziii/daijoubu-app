@@ -4166,6 +4166,15 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f0b004f
 			public const int select_dialog_listview = 2131427407;
 			
+			// aapt resource value: 0x7f0b0078
+			public const int settings_tts_bypass_switch = 2131427448;
+			
+			// aapt resource value: 0x7f0b007c
+			public const int settings_tts_pitch_seekBar = 2131427452;
+			
+			// aapt resource value: 0x7f0b007a
+			public const int settings_tts_rate_seekBar = 2131427450;
+			
 			// aapt resource value: 0x7f0b003a
 			public const int shortcut = 2131427386;
 			
@@ -4205,9 +4214,6 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f0b004c
 			public const int submit_area = 2131427404;
 			
-			// aapt resource value: 0x7f0b0077
-			public const int switch1 = 2131427447;
-			
 			// aapt resource value: 0x7f0b000b
 			public const int tabMode = 2131427339;
 			
@@ -4222,6 +4228,15 @@ namespace daijoubu_app
 			
 			// aapt resource value: 0x7f0b0050
 			public const int textView1 = 2131427408;
+			
+			// aapt resource value: 0x7f0b0077
+			public const int textView2 = 2131427447;
+			
+			// aapt resource value: 0x7f0b0079
+			public const int textView3 = 2131427449;
+			
+			// aapt resource value: 0x7f0b007b
+			public const int textView4 = 2131427451;
 			
 			// aapt resource value: 0x7f0b0068
 			public const int textView_item = 2131427432;
@@ -4460,11 +4475,11 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f050014
 			public const int Hello = 2131034132;
 			
-			// aapt resource value: 0x7f050025
-			public const int Icon_Speaker = 2131034149;
+			// aapt resource value: 0x7f050028
+			public const int Icon_Speaker = 2131034152;
 			
-			// aapt resource value: 0x7f050026
-			public const int Test_speak = 2131034150;
+			// aapt resource value: 0x7f050029
+			public const int Test_speak = 2131034153;
 			
 			// aapt resource value: 0x7f050000
 			public const int abc_action_bar_home_description = 2131034112;
@@ -4526,14 +4541,23 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f050021
 			public const int closeDrawer = 2131034145;
 			
-			// aapt resource value: 0x7f050024
-			public const int fa_home = 2131034148;
+			// aapt resource value: 0x7f050027
+			public const int fa_home = 2131034151;
 			
 			// aapt resource value: 0x7f050022
 			public const int layout_settings_title = 2131034146;
 			
+			// aapt resource value: 0x7f050024
+			public const int layout_settings_tts_bypass = 2131034148;
+			
+			// aapt resource value: 0x7f050026
+			public const int layout_settings_tts_pitch = 2131034150;
+			
+			// aapt resource value: 0x7f050025
+			public const int layout_settings_tts_rate = 2131034149;
+			
 			// aapt resource value: 0x7f050023
-			public const int layout_settings_tts_bypass = 2131034147;
+			public const int layout_settings_tts_title = 2131034147;
 			
 			// aapt resource value: 0x7f05001a
 			public const int listview_about = 2131034138;

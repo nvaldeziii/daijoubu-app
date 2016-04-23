@@ -22,17 +22,14 @@ namespace daijoubu_app
             base.OnCreate(savedInstanceState);
 
             // Create your fragment here
+            LoadedPrefs = new AndroidAssistant.LoadedPreferences();
+            JapaneseTTS = LoadedPrefs.GetJapaneseTTS(Activity);
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
             View view = inflater.Inflate(Resource.Layout.Module_Listening, container, false);
-
-            LoadedPrefs = new AndroidAssistant.LoadedPreferences();
-            JapaneseTTS = LoadedPrefs.GetJapaneseTTS(Activity);
-
-           
 
             Button Listening_button_speaker = view.FindViewById<Button>(Resource.Id.listening_button_speaker);
             Listening_button_speaker.Click += Listening_button_speaker_Click;
