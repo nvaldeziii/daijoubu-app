@@ -16,6 +16,7 @@ using AndroidAssistant;
 using AndroidHelper;
 
 using Android.Graphics;
+using Android.Speech.Tts;
 
 namespace daijoubu_app
 {
@@ -164,6 +165,19 @@ namespace daijoubu_app
 
             // (done) close drawer toggle when a list item is clicked
             mDrawerLayout.CloseDrawers();
+        }
+
+        //For TTS
+        private readonly int MyCheckCode = 101, NeedLang = 103;
+        protected override void OnActivityResult(int req, Result res, Intent data)
+        {
+            if (req == NeedLang)
+            {
+                // we need a new language installed
+                var installTTS = new Intent();
+                installTTS.SetAction(TextToSpeech.Engine.ActionInstallTtsData);
+                StartActivity(installTTS);
+            }
         }
 
     }
