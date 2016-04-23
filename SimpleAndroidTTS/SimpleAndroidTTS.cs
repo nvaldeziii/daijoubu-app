@@ -22,7 +22,7 @@ using Java.Util;
 //library for array adapter
 using Android.Widget;
 
-namespace Bussiness
+namespace SimpleTTS
 {
     public struct SimpleSettingsTTS
     {
@@ -77,7 +77,9 @@ namespace Bussiness
         //initializations
         private TextToSpeech textToSpeech;
         Context context;
+#pragma warning disable CS0414
         private readonly int MyCheckCode = 101, NeedLang = 103;
+#pragma warning restore CS0414
         private Locale lang;
 
         private List<string> AvailableLanguage;

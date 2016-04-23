@@ -76,7 +76,9 @@ namespace AndroidHelper
         {
             SupportTransaction Transaction = m;
 
-            Transaction.Hide(FragContainer[CurrentFrag]);
+            if(FragContainer[CurrentFrag] != null)
+                Transaction.Hide(FragContainer[CurrentFrag]);
+
             Transaction.Show(FragContainer[FragTag.IndexOf(tag)]);
             CurrentFrag = FragTag.IndexOf(tag);
             Transaction.Commit();

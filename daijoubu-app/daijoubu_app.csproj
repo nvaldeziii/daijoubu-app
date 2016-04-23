@@ -135,6 +135,10 @@
       <Project>{6cbb3b19-430a-4535-b0f3-fe4265160682}</Project>
       <Name>AndroidHelper</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SimpleAndroidTTS\SimpleTTS.csproj">
+      <Project>{85537370-a565-4880-8663-e1e6776035c0}</Project>
+      <Name>SimpleTTS</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Styles.xml">
