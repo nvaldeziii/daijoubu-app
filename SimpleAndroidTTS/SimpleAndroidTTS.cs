@@ -124,6 +124,20 @@ namespace SimpleTTS
 
         }
 
+        public void SpeakDefault(string text)
+        {
+            // if there is nothing to say, don't say it
+            if (!string.IsNullOrEmpty(text))
+            {
+                textToSpeech.SetLanguage(Locale.Default);
+#pragma warning disable CS0618 // Type or member is obsolete
+                textToSpeech.Speak(text, QueueMode.Flush, null);
+#pragma warning restore CS0618 // Type or member is obsolete
+                textToSpeech.SetLanguage(lang);
+            }
+
+        }
+
         /// <summary>
         ///  This is mandatory.
         ///  I am not sure but they usually pass the button as context

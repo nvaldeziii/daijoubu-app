@@ -19,6 +19,9 @@ namespace daijoubu_app
         AndroidAssistant.LoadedPreferences LoadedPrefs;
         SimpleTTS.SimpleAndroidTTS JapaneseTTS;
 
+        //temp
+        EditText what;
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -34,6 +37,9 @@ namespace daijoubu_app
             View view = inflater.Inflate(Resource.Layout.Module_Listening, container, false);
 
             Button Listening_button_speaker = view.FindViewById<Button>(Resource.Id.listening_button_speaker);
+
+            what = view.FindViewById<EditText>(Resource.Id.listening_editText_answer);
+
             Listening_button_speaker.Click += Listening_button_speaker_Click;
 
             return view;
@@ -44,8 +50,15 @@ namespace daijoubu_app
         /// </summary>
         private void Listening_button_speaker_Click(object sender, EventArgs e)
         {
-            string what = Context.ApplicationContext.Resources.GetString(Resource.String.Test_speak);
-            JapaneseTTS.Speak(what);
+            string What = what.Text;
+            if (AndroidHelper.StringHelper.IsEnglishSpeakable(What))
+            {
+                JapaneseTTS.SpeakDefault(What);
+            }
+            else
+            {
+                JapaneseTTS.Speak(What);
+            }
         }
     }
 }
