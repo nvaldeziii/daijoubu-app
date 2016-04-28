@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace daijoubu_app
 {
-    public class FragProfile : Android.Support.V4.App.Fragment
+    public class FragAchievement : Android.Support.V4.App.Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -25,7 +25,7 @@ namespace daijoubu_app
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
-            return inflater.Inflate(Resource.Layout.Profile, container, false);
+            return inflater.Inflate(Resource.Layout.Achievement, container, false);
         }
     }
 }

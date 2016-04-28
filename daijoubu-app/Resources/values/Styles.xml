@@ -14,4 +14,54 @@
     <item name="android:windowBackground">@drawable/splash_background</item>
     <item name="android:windowNoTitle">true</item>
   </style>
+
+  <!-- Text Shadow -->
+  <style name="TextShadow">
+    <item name="android:paddingLeft">4px</item>
+    <item name="android:paddingBottom">4px</item>
+    <item name="android:shadowColor">#000000</item>
+    <item name="android:shadowDx">-2</item>
+    <item name="android:shadowDy">2</item>
+    <item name="android:shadowRadius">0.5</item>
+  </style>
+
+  <!-- separator -->
+  <style name="LayoutSeparator">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">2dp</item>
+    <item name="android:background">#595959</item>
+  </style>
+  <style name="LayoutSeparator_Vertical">
+    <item name="android:layout_width">2dp</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:background">#595959</item>
+    <item name="android:layout_marginTop">6dp</item>
+    <item name="android:layout_marginBottom">6dp</item>
+  </style>
+  
+  <!-- home progress sumarry -->
+  <style name="HomeProgressSumRelLayout">
+    <item name="android:padding">10dp</item>
+    <item name="android:layout_marginTop">10dp</item>
+  </style>
+
+  <style name="HomeProgressTextView">
+    <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textColor">#99ff99</item>
+   
+  </style>
+
+  <style name="HomeProgressTextViewSub">
+    <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textColor">#595959</item>
+  </style>
+
+  <!-- home reminder cards -->
+  <style name="HomeReminderCard">
+    
+    
+  </style>
+  
 </resources>

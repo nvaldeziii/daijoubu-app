@@ -73,7 +73,7 @@
     <Compile Include="FragModuleListening.cs" />
     <Compile Include="FragModuleMultipleChoise.cs" />
     <Compile Include="FragModuleTyping.cs" />
-    <Compile Include="FragProfile.cs" />
+    <Compile Include="FragAchievement.cs" />
     <Compile Include="FragSettings.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -97,7 +97,7 @@
     <AndroidResource Include="Resources\layout\Settings.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\Profile.axml">
+    <AndroidResource Include="Resources\layout\Achievement.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Menu.axml">
@@ -150,6 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash_background.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\home_cover_free.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

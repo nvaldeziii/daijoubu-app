@@ -14,6 +14,14 @@
   <string name="layout_settings_tts_rate">Rate</string>
   <string name="layout_settings_tts_pitch">Pitch</string>
   
+  <!-- Home screen -->
+  <string name="layout_home_title">Daijoubu</string>
+  <string name="layout_home_subtitle">Everthing is gonna be だいじょうぶ</string>
+  <string name="layout_home_progress_queue">Queued</string>
+  <string name="layout_home_progress_completion">Progress</string>
+  <string name="layout_home_progress_grade">Grade</string>
+  
+  
    <!-- font awesome string list -->
   <string name="fa_home">&#xf015;</string>
  

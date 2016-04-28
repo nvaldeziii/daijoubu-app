@@ -147,7 +147,7 @@ namespace daijoubu_app
                     break;
                 case 1:
                     // MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragProfile");
-                    MainFragment.Replace(new FragProfile(), SupportFragmentManager.BeginTransaction());
+                    MainFragment.Replace(new FragAchievement(), SupportFragmentManager.BeginTransaction());
                     break; 
                 case 2:
                     // MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragModule");
@@ -168,9 +168,9 @@ namespace daijoubu_app
         }
 
         //For TTS
-        private readonly int MyCheckCode = 101, NeedLang = 103;
         protected override void OnActivityResult(int req, Result res, Intent data)
         {
+            int NeedLang = 103;
             if (req == NeedLang)
             {
                 // we need a new language installed
