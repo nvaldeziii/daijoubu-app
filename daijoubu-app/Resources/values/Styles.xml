@@ -43,6 +43,8 @@
   <style name="HomeProgressSumRelLayout">
     <item name="android:padding">10dp</item>
     <item name="android:layout_marginTop">10dp</item>
+    <item name="android:layout_weight">0.3</item>
+    <item name="android:layout_width">wrap_content</item>
   </style>
 
   <style name="HomeProgressTextView">
