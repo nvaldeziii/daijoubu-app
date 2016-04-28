@@ -5,14 +5,126 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-    <TextView
-        android:text="Welcome to daijoubu"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+<!-- Top Cover -->
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/home_cover_free"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:id="@+id/imageView_home_topcover"
+            android:scaleType="centerCrop"
+            android:alpha="0.8" />
+        <TextView
+            android:text="@string/layout_home_subtitle"
+            android:id="@+id/textView_home_cover_subtitle"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_alignBottom="@+id/imageView_home_topcover"
+            style="@style/TextShadow"
+            android:layout_marginBottom="30dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="@string/layout_home_title"
+            android:id="@+id/textView_home_cover_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textStyle="bold"
+            style="@style/TextShadow"
+            android:layout_above="@+id/textView_home_cover_subtitle" />
+    </RelativeLayout>
+<!-- content -->
+<!-- three bar on top (progress) -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:id="@+id/linearLayout_home_progress">
+    <!-- 1 -->
+        <RelativeLayout
+            style="@style/HomeProgressSumRelLayout"
+            android:minWidth="25px"
+            android:minHeight="25dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout_progress_1"
+            android:layout_weight="0.3">
+            <TextView
+                style="@style/HomeProgressTextView"
+                android:text="5 Items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_home_progess_1" />
+            <TextView
+                style="@style/HomeProgressTextViewSub"
+                android:text="@string/layout_home_progress_queue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_home_progess_1_1"
+                android:layout_below="@+id/textView_home_progess_1" />
+        </RelativeLayout>
+    <!-- 2 -->
+        <View
+            style="@style/LayoutSeparator_Vertical" />
+        <RelativeLayout
+            style="@style/HomeProgressSumRelLayout"
+            android:minWidth="25px"
+            android:minHeight="25dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout_progress_2"
+            android:layout_weight="0.3">
+            <TextView
+                style="@style/HomeProgressTextView"
+                android:text="10%"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_home_progess_2" />
+            <TextView
+                style="@style/HomeProgressTextViewSub"
+                android:text="@string/layout_home_progress_completion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_home_progess_2_1"
+                android:layout_below="@+id/textView_home_progess_2" />
+        </RelativeLayout>
+        <View
+            style="@style/LayoutSeparator_Vertical" />
+    <!-- 3 -->
+        <RelativeLayout
+            style="@style/HomeProgressSumRelLayout"
+            android:minWidth="25px"
+            android:minHeight="25dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout_progress_3"
+            android:layout_weight="0.3">
+            <TextView
+                style="@style/HomeProgressTextView"
+                android:text="75.5%"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_home_progess_3" />
+            <TextView
+                style="@style/HomeProgressTextViewSub"
+                android:text="@string/layout_home_progress_grade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_home_progess_3_1"
+                android:layout_below="@+id/textView_home_progess_3" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        style="@style/LayoutSeparator" />
     <Button
-        android:text="@string/fa_home"
+        android:text="test button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button_test" />

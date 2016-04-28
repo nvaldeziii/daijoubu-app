@@ -78,9 +78,28 @@ namespace AndroidAssistant
             }
         }
 
+        public bool FreshInstall
+        {
+            get
+            {
+                return Prefs.GetBoolean(Fresh, true);
+            }
+        }
+
         const string ApplicationPreferenceTag = "daijoubu_prefs";
+        const string Fresh = "Fresh";
         const string TTSInstallerBypassTag = "TTSInstallerBypass";
         const string TTSRateTag = "TTSRate";
         const string TTSPitchTag = "TTSPitch";
+
+        ~PreferencesAssistant()
+        {
+            if (FreshInstall)
+            {
+                TTSInstallerBypass = true;
+                PrefsEditor.PutBoolean(Fresh, false);
+                PrefsEditor.Apply();
+            }
+        }
     }
 }
