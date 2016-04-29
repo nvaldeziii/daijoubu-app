@@ -83,13 +83,17 @@ namespace AndroidHelper
                 return;
             }
 
+            SupportTransaction trans = m;
+            //let's try to delete the fragment and then add the new to prevent the fragment from being stored
+            trans.Remove(FragContainer[CurrentFrag]);
+
             FragContainer[CurrentFrag] = frag;
 
-            SupportTransaction trans = m;
-            trans.Replace(FrameContainer, FragContainer[CurrentFrag]);
-            trans.Commit();
+            //trans.Replace(FrameContainer, FragContainer[CurrentFrag]);
 
-            
+            //instead of replace, well add the fragment because we delete the original to solved the not destroyed problem
+            trans.Add(FrameContainer, FragContainer[CurrentFrag]);
+            trans.Commit();
         }
 
         /// <summary>

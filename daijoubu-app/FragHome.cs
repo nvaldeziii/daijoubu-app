@@ -32,11 +32,18 @@ namespace daijoubu_app
             View view = inflater.Inflate(Resource.Layout.Home, container, false);
 
             //test codes
+            Button testb = view.FindViewById<Button>(Resource.Id.button_test);
+            testb.Click += Testb_Click;
 
             return view;
 
             
 
+        }
+
+        private void Testb_Click(object sender, EventArgs e)
+        {
+            Toast.MakeText(Application.Context, "cheers!", ToastLength.Long).Show();
         }
     }
 }

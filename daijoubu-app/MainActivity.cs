@@ -142,23 +142,18 @@ namespace daijoubu_app
             switch (e.Position)
             {
                 case 0:
-                    // MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragHome");
                     MainFragment.Replace(new FragHome(), SupportFragmentManager.BeginTransaction());
                     break;
                 case 1:
-                    // MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragProfile");
                     MainFragment.Replace(new FragAchievement(), SupportFragmentManager.BeginTransaction());
                     break; 
                 case 2:
-                    // MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragModule");
                     MainFragment.Replace(new FragModule(), SupportFragmentManager.BeginTransaction());
                     break;
                 case 3:
-                    // MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragSettings");
                     MainFragment.Replace(new FragSettings(), SupportFragmentManager.BeginTransaction());
                     break;
                 case 4:
-                    // MainFragment.Switch(SupportFragmentManager.BeginTransaction(), "FragAbout");
                     MainFragment.Replace(new FragAbout(), SupportFragmentManager.BeginTransaction());
                     break;
             }
