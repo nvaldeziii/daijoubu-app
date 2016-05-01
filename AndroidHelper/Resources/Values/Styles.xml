@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <!-- CardView -->
+  <style name="CardViewMainTextView">
+    <item name="android:minHeight">150dp</item>
+  </style>
+</resources>

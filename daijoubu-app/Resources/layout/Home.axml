@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:background="@android:color/holo_blue_light">
 <!-- Top Cover -->
     <RelativeLayout
         android:minWidth="25px"
@@ -120,6 +121,11 @@
     </LinearLayout>
     <View
         style="@style/LayoutSeparator" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/layout_main_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
     <Button
         android:text="test button"
         android:layout_width="match_parent"

@@ -21,6 +21,13 @@
   <string name="layout_home_progress_completion">Progress</string>
   <string name="layout_home_progress_grade">Grade</string>
   
+  <!-- about -->
+  
+  
+  
+  <!-- format strict strings -->
+  <string name="layout_about_version">Version: {0}</string>
+  <string name="layout_about_builddate">Date: {0} \nTime: {1}</string>
   
    <!-- font awesome string list -->
   <string name="fa_home">&#xf015;</string>
@@ -31,5 +38,6 @@
   
   <!-- test strings -->
   <string name="Test_speak">こんにちは</string>
+  <string name="Test_Jstring">言葉</string>
   
 </resources>

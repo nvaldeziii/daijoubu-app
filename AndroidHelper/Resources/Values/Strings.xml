@@ -2,6 +2,10 @@
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">$projectname$</string>
+
+  <string name="Test_JstringHelper">.言葉.</string>
   
- 
+  <!-- fa strings -->
+  <string name="cardview_check">&#xf00c;</string>
+  <string name="cardview_trash">&#xf014;</string>
 </resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:padding="20dp">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout1">
+        <TextView
+            style="@style/CardViewMainTextView"
+            android:text="@string/Test_JstringHelper"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardview_textView_main"
+            android:background="#fff"
+            android:textColor="#000"
+            android:minHeight="150dp"
+            android:gravity="center"
+            android:paddingBottom="50dp" />
+        <TextView
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardview_textView_subtitle"
+            android:background="#000"
+            android:alpha="0.5"
+            android:gravity="center"
+            android:layout_alignBottom="@+id/cardview_textView_main"
+            android:minHeight="40dp" />
+        <TextView
+            android:text="10m ago"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardview_textView_timestamp"
+            android:textColor="#000"
+            android:padding="4dp"
+            android:layout_alignEnd="@+id/cardview_textView_main"
+            android:layout_marginRight="5dp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:background="#fff">
+        <Button
+            android:text="@string/cardview_trash"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button1"
+            android:layout_weight="0.3" />
+        <Button
+            android:text="@string/cardview_check"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button2"
+            android:layout_weight="0.3" />
+    </LinearLayout>
+</LinearLayout>
