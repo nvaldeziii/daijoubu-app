@@ -66,7 +66,7 @@ namespace daijoubu_app
                 Resource.String.openDrawer,     //top bar title when string is opened
                 Resource.String.ApplicationName //top bar title when closed
                 );
-
+            
             mDrawerLayout.SetDrawerListener(mDrawerToggle);
             //SupportActionBar.SetTitle(Resource.String.ApplicationName);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true); //this replace the next' lines code because it is depreciated in 22 

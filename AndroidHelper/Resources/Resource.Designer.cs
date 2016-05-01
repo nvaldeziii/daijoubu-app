@@ -1482,7 +1482,10 @@ namespace AndroidHelper
 			public static int abc_textfield_search_material = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public static int notification_template_icon_bg = 2130837573;
+			public static int button_circle_states = 2130837573;
+			
+			// aapt resource value: 0x7f020046
+			public static int notification_template_icon_bg = 2130837574;
 			
 			static Drawable()
 			{
@@ -1497,14 +1500,14 @@ namespace AndroidHelper
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060059
-			public static int ListItem = 2131099737;
+			// aapt resource value: 0x7f06005c
+			public static int ListItem = 2131099740;
 			
-			// aapt resource value: 0x7f060058
-			public static int ListItem_fa = 2131099736;
+			// aapt resource value: 0x7f06005b
+			public static int ListItem_fa = 2131099739;
 			
-			// aapt resource value: 0x7f06005a
-			public static int action0 = 2131099738;
+			// aapt resource value: 0x7f06005d
+			public static int action0 = 2131099741;
 			
 			// aapt resource value: 0x7f060042
 			public static int action_bar = 2131099714;
@@ -1530,8 +1533,8 @@ namespace AndroidHelper
 			// aapt resource value: 0x7f060043
 			public static int action_context_bar = 2131099715;
 			
-			// aapt resource value: 0x7f06005e
-			public static int action_divider = 2131099742;
+			// aapt resource value: 0x7f060061
+			public static int action_divider = 2131099745;
 			
 			// aapt resource value: 0x7f060003
 			public static int action_menu_divider = 2131099651;
@@ -1560,17 +1563,17 @@ namespace AndroidHelper
 			// aapt resource value: 0x7f060019
 			public static int beginning = 2131099673;
 			
-			// aapt resource value: 0x7f060056
-			public static int button1 = 2131099734;
-			
-			// aapt resource value: 0x7f060057
-			public static int button2 = 2131099735;
-			
 			// aapt resource value: 0x7f06002c
 			public static int buttonPanel = 2131099692;
 			
-			// aapt resource value: 0x7f06005b
-			public static int cancel_action = 2131099739;
+			// aapt resource value: 0x7f06005e
+			public static int cancel_action = 2131099742;
+			
+			// aapt resource value: 0x7f06005a
+			public static int cardview_button_check = 2131099738;
+			
+			// aapt resource value: 0x7f060058
+			public static int cardview_button_trash = 2131099736;
 			
 			// aapt resource value: 0x7f060052
 			public static int cardview_textView_main = 2131099730;
@@ -1581,11 +1584,14 @@ namespace AndroidHelper
 			// aapt resource value: 0x7f060054
 			public static int cardview_textView_timestamp = 2131099732;
 			
+			// aapt resource value: 0x7f060056
+			public static int center_point = 2131099734;
+			
 			// aapt resource value: 0x7f06003a
 			public static int checkbox = 2131099706;
 			
-			// aapt resource value: 0x7f060061
-			public static int chronometer = 2131099745;
+			// aapt resource value: 0x7f060064
+			public static int chronometer = 2131099748;
 			
 			// aapt resource value: 0x7f06001d
 			public static int collapseActionView = 2131099677;
@@ -1614,8 +1620,8 @@ namespace AndroidHelper
 			// aapt resource value: 0x7f06001a
 			public static int end = 2131099674;
 			
-			// aapt resource value: 0x7f060066
-			public static int end_padder = 2131099750;
+			// aapt resource value: 0x7f060069
+			public static int end_padder = 2131099753;
 			
 			// aapt resource value: 0x7f060026
 			public static int expand_activities_button = 2131099686;
@@ -1638,20 +1644,20 @@ namespace AndroidHelper
 			// aapt resource value: 0x7f060027
 			public static int image = 2131099687;
 			
-			// aapt resource value: 0x7f060065
-			public static int info = 2131099749;
+			// aapt resource value: 0x7f060068
+			public static int info = 2131099752;
 			
 			// aapt resource value: 0x7f060000
 			public static int item_touch_helper_previous_elevation = 2131099648;
 			
-			// aapt resource value: 0x7f06005f
-			public static int line1 = 2131099743;
+			// aapt resource value: 0x7f060057
+			public static int left_layout = 2131099735;
 			
-			// aapt resource value: 0x7f060063
-			public static int line3 = 2131099747;
+			// aapt resource value: 0x7f060062
+			public static int line1 = 2131099746;
 			
-			// aapt resource value: 0x7f060055
-			public static int linearLayout1 = 2131099733;
+			// aapt resource value: 0x7f060066
+			public static int line3 = 2131099750;
 			
 			// aapt resource value: 0x7f06000a
 			public static int listMode = 2131099658;
@@ -1659,8 +1665,8 @@ namespace AndroidHelper
 			// aapt resource value: 0x7f060029
 			public static int list_item = 2131099689;
 			
-			// aapt resource value: 0x7f06005d
-			public static int media_actions = 2131099741;
+			// aapt resource value: 0x7f060060
+			public static int media_actions = 2131099744;
 			
 			// aapt resource value: 0x7f06001b
 			public static int middle = 2131099675;
@@ -1691,6 +1697,12 @@ namespace AndroidHelper
 			
 			// aapt resource value: 0x7f060051
 			public static int relativeLayout1 = 2131099729;
+			
+			// aapt resource value: 0x7f060055
+			public static int relativeLayout2 = 2131099733;
+			
+			// aapt resource value: 0x7f060059
+			public static int right_layout = 2131099737;
 			
 			// aapt resource value: 0x7f060015
 			public static int screen = 2131099669;
@@ -1764,8 +1776,8 @@ namespace AndroidHelper
 			// aapt resource value: 0x7f060018
 			public static int src_over = 2131099672;
 			
-			// aapt resource value: 0x7f06005c
-			public static int status_bar_latest_event_content = 2131099740;
+			// aapt resource value: 0x7f06005f
+			public static int status_bar_latest_event_content = 2131099743;
 			
 			// aapt resource value: 0x7f06004d
 			public static int submit_area = 2131099725;
@@ -1773,17 +1785,17 @@ namespace AndroidHelper
 			// aapt resource value: 0x7f06000c
 			public static int tabMode = 2131099660;
 			
-			// aapt resource value: 0x7f060064
-			public static int text = 2131099748;
+			// aapt resource value: 0x7f060067
+			public static int text = 2131099751;
 			
-			// aapt resource value: 0x7f060062
-			public static int text2 = 2131099746;
+			// aapt resource value: 0x7f060065
+			public static int text2 = 2131099749;
 			
 			// aapt resource value: 0x7f060035
 			public static int textSpacerNoButtons = 2131099701;
 			
-			// aapt resource value: 0x7f060060
-			public static int time = 2131099744;
+			// aapt resource value: 0x7f060063
+			public static int time = 2131099747;
 			
 			// aapt resource value: 0x7f06002b
 			public static int title = 2131099691;
@@ -1989,6 +2001,9 @@ namespace AndroidHelper
 			// aapt resource value: 0x7f090016
 			public static int Test_JstringHelper = 2131296278;
 			
+			// aapt resource value: 0x7f090017
+			public static int Test_JstringHelper2 = 2131296279;
+			
 			// aapt resource value: 0x7f090000
 			public static int abc_action_bar_home_description = 2131296256;
 			
@@ -2046,11 +2061,11 @@ namespace AndroidHelper
 			// aapt resource value: 0x7f090012
 			public static int abc_toolbar_collapse_description = 2131296274;
 			
-			// aapt resource value: 0x7f090017
-			public static int cardview_check = 2131296279;
-			
 			// aapt resource value: 0x7f090018
-			public static int cardview_trash = 2131296280;
+			public static int cardview_check = 2131296280;
+			
+			// aapt resource value: 0x7f090019
+			public static int cardview_trash = 2131296281;
 			
 			// aapt resource value: 0x7f090013
 			public static int status_bar_notification_info_overflow = 2131296275;
@@ -2511,6 +2526,9 @@ namespace AndroidHelper
 			
 			// aapt resource value: 0x7f070003
 			public static int CardView_Light = 2131165187;
+			
+			// aapt resource value: 0x7f070138
+			public static int CardViewMainButton = 2131165496;
 			
 			// aapt resource value: 0x7f070137
 			public static int CardViewMainTextView = 2131165495;

@@ -4,4 +4,12 @@
   <style name="CardViewMainTextView">
     <item name="android:minHeight">150dp</item>
   </style>
+  
+  <!-- Card button-->
+  <style name="CardViewMainButton">
+    <item name="android:layout_width">75dp</item>
+    <item name="android:layout_height">75dp</item>
+    <item name ="android:background">@drawable/button_circle_states</item>
+  </style>
+  
 </resources>

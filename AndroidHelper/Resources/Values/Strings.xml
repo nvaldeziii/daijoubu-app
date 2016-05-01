@@ -4,6 +4,7 @@
     <string name="ApplicationName">$projectname$</string>
 
   <string name="Test_JstringHelper">.言葉.</string>
+  <string name="Test_JstringHelper2">.sample_sub.</string>
   
   <!-- fa strings -->
   <string name="cardview_check">&#xf00c;</string>

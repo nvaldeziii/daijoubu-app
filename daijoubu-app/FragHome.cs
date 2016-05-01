@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Graphics;
 using Android.Support.V7.Widget;
+using AndroidHelper;
 
 namespace daijoubu_app
 {
@@ -21,15 +22,15 @@ namespace daijoubu_app
         private RecyclerView.LayoutManager mLayoutManager;
         private RecyclerView.Adapter mAdapter;
 
-        private List<AndroidHelper.CardViewHelper> Cards;
+        private CardListHelper<CardViewHelper> Cards;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your fragment here
-           
-            
+
+
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -37,43 +38,62 @@ namespace daijoubu_app
             // Use this to return your custom view for this Fragment
             View view = inflater.Inflate(Resource.Layout.Home, container, false);
 
-            //test codes
-            Button testb = view.FindViewById<Button>(Resource.Id.button_test);
-            testb.Click += Testb_Click;
-
-
             //Create Notigication Card recylcer biew
             mRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.layout_main_recycler);
 
             mLayoutManager = new LinearLayoutManager(Application.Context);
-            Cards = new List<AndroidHelper.CardViewHelper>();
+            Cards = new CardListHelper<CardViewHelper>();
+            
 
             //create tmp cards
             Cards.Add(new AndroidHelper.CardViewHelper()
             {
-                Title = "hi", SubTitle = "hello"
+                Title = "hi",
+                SubTitle = "hello",
+                Time = "1m ago"
             });
             Cards.Add(new AndroidHelper.CardViewHelper()
             {
                 Title = "hi2",
-                SubTitle = "hello2"
+                SubTitle = "hello2",
+                Time = "5m ago"
             });
 
-            mAdapter = new AndroidHelper.RecyclerHelper(Cards);
+            mAdapter = new AndroidHelper.CardRecyclerHelper(Cards, mRecyclerView);
+            Cards.Adapter = mAdapter;
 
             mRecyclerView.SetLayoutManager(mLayoutManager);
             mRecyclerView.SetAdapter(mAdapter);
+
+            //tmp button to add cards
+            Button btnadd = view.FindViewById<Button>(Resource.Id.button_addcard);
+            btnadd.Click += (o, e) =>
+            {
+                Cards.Add(new CardViewHelper() { Title = "added", SubTitle = "why", Time = DateTime.Now.ToLocalTime().ToString() });
+           
+            };
 
             return view;
 
         }
 
-       
+        //public override bool OnOptionsItemSelected(IMenuItem item)
+        //{
+        //    switch (item.ItemId)
+        //    {
+        //        case Resource.Id.cardview_button_check:
+        //            Cards.Add(new AndroidHelper.CardViewHelper() { Title="added", SubTitle="why", Time="Just Now" });
+        //            mAdapter.NotifyDataSetChanged();
+        //            return true;
+        //        case Resource.Id.cardview_button_trash:
+        //            Cards.RemoveAt(Cards.Count - 1);
+        //            mAdapter.NotifyDataSetChanged();
 
+        //            return true;
+        //        default:
+        //            return base.OnOptionsItemSelected(item);
+        //    }
+        //}
 
-        private void Testb_Click(object sender, EventArgs e)
-        {
-            Toast.MakeText(Application.Context, "cheers!", ToastLength.Long).Show();
-        }
     }
 }
