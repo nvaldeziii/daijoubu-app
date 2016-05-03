@@ -38,9 +38,11 @@ namespace AndroidHelper
         {
             MyView myHolder = holder as MyView;
 
-            myHolder.tvTitle.Text = Cards[position].Title;
-            //myHolder.tvSubTitle.Text = Cards[position].SubTitle;
-            myHolder.tvTime.Text = Cards[position].Time;
+            int IndexPosition = (Cards.Count - 1) - position;
+
+            myHolder.tvTitle.Text = Cards[IndexPosition].Title;
+            myHolder.tvSubTitle.Text = Cards[IndexPosition].SubTitle;
+            myHolder.tvTime.Text = Cards[IndexPosition].Time;
 
             myHolder.mMainView.Click += CardMainView_Click;
 
@@ -48,7 +50,7 @@ namespace AndroidHelper
             Button ButtonTrash = myHolder.mMainView.FindViewById<Button>(Resource.Id.cardview_button_trash);
             ButtonTrash.Click += (o, e) =>
             {
-                Cards.Remove(position);
+                Cards.Remove(position);// index position or position?
             };
         }
 
