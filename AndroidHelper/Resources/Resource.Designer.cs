@@ -1578,11 +1578,11 @@ namespace AndroidHelper
 			// aapt resource value: 0x7f060052
 			public static int cardview_textView_main = 2131099730;
 			
-			// aapt resource value: 0x7f060053
-			public static int cardview_textView_subtitle = 2131099731;
-			
 			// aapt resource value: 0x7f060054
-			public static int cardview_textView_timestamp = 2131099732;
+			public static int cardview_textView_subtitle = 2131099732;
+			
+			// aapt resource value: 0x7f060053
+			public static int cardview_textView_timestamp = 2131099731;
 			
 			// aapt resource value: 0x7f060056
 			public static int center_point = 2131099734;

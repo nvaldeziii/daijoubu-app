@@ -76,7 +76,6 @@
   <ItemGroup>
     <Compile Include="FragAbout.cs" />
     <Compile Include="FragHome.cs" />
-    <Compile Include="FragMenu.cs" />
     <Compile Include="FragModule.cs" />
     <Compile Include="FragModuleListening.cs" />
     <Compile Include="FragModuleMultipleChoise.cs" />

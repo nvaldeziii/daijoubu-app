@@ -30,7 +30,7 @@ namespace AndroidHelper
             Items.Add(item);
             if (Adapter != null)
             {
-                Adapter.NotifyItemInserted(0);
+                Adapter.NotifyDataSetChanged();
             }
         }
 
@@ -39,7 +39,30 @@ namespace AndroidHelper
             Items.RemoveAt(position);
             if (Adapter != null)
             {
-                Adapter.NotifyItemRemoved(0);
+                //Adapter.NotifyItemRemoved(0);
+                Adapter.NotifyDataSetChanged();
+            }
+        }
+
+        public void RemoveSpecific(T i)
+        {
+
+            if (Items.Remove(i))
+            {
+                if (Adapter != null)
+                {
+                    Adapter.NotifyDataSetChanged();
+                }
+            }
+
+        }
+
+        public void Sort()
+        {
+            Items.Sort();
+            if (Adapter != null)
+            {
+                Adapter.NotifyDataSetChanged();
             }
         }
 

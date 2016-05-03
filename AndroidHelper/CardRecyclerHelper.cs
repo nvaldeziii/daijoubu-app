@@ -44,30 +44,18 @@ namespace AndroidHelper
             myHolder.tvSubTitle.Text = Cards[IndexPosition].SubTitle;
             myHolder.tvTime.Text = Cards[IndexPosition].Time;
 
-            myHolder.mMainView.Click += CardMainView_Click;
-
-            //tmp click
-            Button ButtonTrash = myHolder.mMainView.FindViewById<Button>(Resource.Id.cardview_button_trash);
-            ButtonTrash.Click += (o, e) =>
-            {
-                Cards.Remove(position);// index position or position?
-            };
+            
+     
         }
 
-      
-        private void CardMainView_Click(object sender, EventArgs e)
-        {
-            int position = mRecyclerView.GetChildPosition((View)sender);
-            int indexPosition = (Cards.Count - 1) - position;
-            Console.WriteLine(Cards[position].Title);
-        }
+       
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
             View row = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.CardView_proto,parent,false);
 
             TextView Title = row.FindViewById<TextView>(Resource.Id.cardview_textView_main);
-            TextView Subtitle = row.FindViewById<TextView>(Resource.Id.cardview_textView_subtitle);
+            TextView Subtitle = row.FindViewById<TextView>(Resource.Id.cardview_textView_subtitle);//sum ting wong
             TextView Time = row.FindViewById<TextView>(Resource.Id.cardview_textView_timestamp);
 
             Button buttonCheck = row.FindViewById<Button>(Resource.Id.cardview_button_check);
@@ -83,8 +71,20 @@ namespace AndroidHelper
                 tvTitle = Title, tvSubTitle = Subtitle, tvTime = Time
             };
 
+            view.mMainView.Click += MMainView_Click;
+            //test
+
             return view;
 
+        }
+
+        private void MMainView_Click(object sender, EventArgs e)
+        {
+            int IndexPosition = (Cards.Count - 1) - mRecyclerView.GetChildPosition((View)sender);
+            Console.WriteLine("  1pos: " + Cards[IndexPosition].Title);
+
+            Cards.RemoveSpecific(Cards[IndexPosition]);
+            Toast.MakeText(Application.Context, string.Format("card {0} is removed", IndexPosition), ToastLength.Short);
         }
 
         public class MyView : RecyclerView.ViewHolder

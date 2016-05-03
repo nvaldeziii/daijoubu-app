@@ -45,25 +45,16 @@ namespace daijoubu_app
             Cards = new CardListHelper<CardViewHelper>();
             
 
-            //create tmp cards
-            Cards.Add(new AndroidHelper.CardViewHelper()
-            {
-                Title = "hi",
-                SubTitle = string.Format("hello card {0}",Cards.Count),
-                Time = "1m ago"
-            });
-            Cards.Add(new AndroidHelper.CardViewHelper()
-            {
-                Title = "hi2",
-                SubTitle = string.Format("hello card {0}", Cards.Count),
-                Time = "5m ago"
-            });
-
             mAdapter = new AndroidHelper.CardRecyclerHelper(Cards, mRecyclerView);
             Cards.Adapter = mAdapter;
 
             mRecyclerView.SetLayoutManager(mLayoutManager);
             mRecyclerView.SetAdapter(mAdapter);
+
+
+            Cards.Add(new CardViewHelper() { Title = string.Format("hello {0}", Cards.Count), SubTitle = string.Format("hello card {0}", Cards.Count), Time = DateTime.Now.ToLocalTime().ToString() });
+            Cards.Add(new CardViewHelper() { Title = string.Format("hello {0}", Cards.Count), SubTitle = string.Format("hello card {0}", Cards.Count), Time = DateTime.Now.ToLocalTime().ToString() });
+            Cards.Add(new CardViewHelper() { Title = string.Format("hello {0}", Cards.Count), SubTitle = string.Format("hello card {0}", Cards.Count), Time = DateTime.Now.ToLocalTime().ToString() });
 
             //tmp button to add cards
             Button btnadd = view.FindViewById<Button>(Resource.Id.button_addcard);

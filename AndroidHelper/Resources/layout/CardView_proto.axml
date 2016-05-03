@@ -16,7 +16,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/relativeLayout1">
         <TextView
-            style="@style/CardViewMainTextView"
             android:text="@string/Test_JstringHelper"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
@@ -29,26 +28,25 @@
             android:paddingBottom="50dp"
             android:paddingTop="10dp" />
         <TextView
+            android:text="10m ago"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardview_textView_timestamp"
+            android:textColor="#00f"
+            android:layout_alignEnd="@+id/cardview_textView_main"
+            android:layout_marginRight="5dp"
+            android:padding="4dp" />
+        <TextView
             android:text="@string/Test_JstringHelper2"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/cardview_textView_subtitle"
             android:background="#000"
-            android:alpha="0.5"
             android:gravity="center"
             android:layout_alignBottom="@+id/cardview_textView_main"
             android:minHeight="40dp" />
-        <TextView
-            android:text="10m ago"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cardview_textView_timestamp"
-            android:textColor="#000"
-            android:layout_alignEnd="@+id/cardview_textView_main"
-            android:layout_marginRight="5dp"
-            android:padding="4dp" />
     </RelativeLayout>
     <RelativeLayout
         android:minWidth="25px"
@@ -70,8 +68,7 @@
             <Button
                 style="@style/CardViewMainButton"
                 android:text="@string/cardview_trash"
-                android:id="@+id/cardview_button_trash"
-                android:layout_centerInParent="true" />
+                android:id="@+id/cardview_button_trash" />
         </LinearLayout>
         <LinearLayout
             android:id="@+id/right_layout"
@@ -82,8 +79,7 @@
             <Button
                 style="@style/CardViewMainButton"
                 android:text="@string/cardview_check"
-                android:id="@+id/cardview_button_check"
-                android:layout_centerInParent="true" />
+                android:id="@+id/cardview_button_check" />
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

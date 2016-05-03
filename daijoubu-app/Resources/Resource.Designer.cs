@@ -4190,11 +4190,11 @@ namespace daijoubu_app
 			// aapt resource value: 0x7f060056
 			public const int cardview_textView_main = 2131099734;
 			
-			// aapt resource value: 0x7f060057
-			public const int cardview_textView_subtitle = 2131099735;
-			
 			// aapt resource value: 0x7f060058
-			public const int cardview_textView_timestamp = 2131099736;
+			public const int cardview_textView_subtitle = 2131099736;
+			
+			// aapt resource value: 0x7f060057
+			public const int cardview_textView_timestamp = 2131099735;
 			
 			// aapt resource value: 0x7f06005a
 			public const int center_point = 2131099738;
