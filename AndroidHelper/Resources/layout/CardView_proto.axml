@@ -7,22 +7,22 @@
     android:minHeight="25px"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
-    android:paddingTop="8dp"
     android:paddingBottom="8dp"
-    android:background="#000">
+    android:paddingTop="8dp">
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/relativeLayout_home_recyclerview">
+        android:id="@+id/relativeLayout_home_recyclerview"
+        android:background="#00b300">
         <TextView
             android:text="@string/Test_JstringHelper"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/cardview_textView_main"
-            android:minHeight="115dp"
+            android:minHeight="100dp"
             android:gravity="center"
             android:paddingTop="10dp" />
         <TextView
@@ -31,17 +31,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/cardview_textView_timestamp"
-            android:textColor="#00f"
+            android:textColor="#fff"
             android:layout_alignEnd="@+id/cardview_textView_main"
             android:layout_marginRight="5dp"
             android:padding="4dp" />
+        <TextView
+            android:text="subtitle..."
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardview_textView_sub"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:layout_below="@+id/cardview_textView_main"
+            android:padding="2dp"
+            android:background="#0d0d0d"
+            android:alpha="0.5"
+            android:minHeight="50dp" />
     </RelativeLayout>
-    <TextView
-        android:text="subtitle..."
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/cardview_textView_sub"
-        android:textColor="#fff"
-        android:gravity="center" />
 </LinearLayout>
