@@ -173,6 +173,11 @@ namespace daijoubu_app
                 installTTS.SetAction(TextToSpeech.Engine.ActionInstallTtsData);
                 StartActivity(installTTS);
             }
+        } 
+
+        public void SetActionBarTitle(string t)
+        {
+            SupportActionBar.Title = t;
         }
 
     }

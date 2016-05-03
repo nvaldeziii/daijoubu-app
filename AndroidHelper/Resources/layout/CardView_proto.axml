@@ -8,24 +8,22 @@
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:paddingTop="8dp"
-    android:paddingBottom="8dp">
+    android:paddingBottom="8dp"
+    android:background="#000">
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/relativeLayout1">
+        android:id="@+id/relativeLayout_home_recyclerview">
         <TextView
             android:text="@string/Test_JstringHelper"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/cardview_textView_main"
-            android:background="#fff"
-            android:textColor="#000"
-            android:minHeight="150dp"
+            android:minHeight="115dp"
             android:gravity="center"
-            android:paddingBottom="50dp"
             android:paddingTop="10dp" />
         <TextView
             android:text="10m ago"
@@ -37,49 +35,13 @@
             android:layout_alignEnd="@+id/cardview_textView_main"
             android:layout_marginRight="5dp"
             android:padding="4dp" />
-        <TextView
-            android:text="@string/Test_JstringHelper2"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/cardview_textView_subtitle"
-            android:background="#000"
-            android:gravity="center"
-            android:layout_alignBottom="@+id/cardview_textView_main"
-            android:minHeight="40dp" />
     </RelativeLayout>
-    <RelativeLayout
-        android:minWidth="25px"
-        android:minHeight="25px"
+    <TextView
+        android:text="subtitle..."
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/relativeLayout2">
-        <LinearLayout
-            android:id="@+id/center_point"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_centerInParent="true" />
-        <LinearLayout
-            android:id="@+id/left_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignRight="@+id/center_point">
-            <Button
-                style="@style/CardViewMainButton"
-                android:text="@string/cardview_trash"
-                android:id="@+id/cardview_button_trash" />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/right_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignLeft="@+id/center_point">
-            <Button
-                style="@style/CardViewMainButton"
-                android:text="@string/cardview_check"
-                android:id="@+id/cardview_button_check" />
-        </LinearLayout>
-    </RelativeLayout>
+        android:id="@+id/cardview_textView_sub"
+        android:textColor="#fff"
+        android:gravity="center" />
 </LinearLayout>

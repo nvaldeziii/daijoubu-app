@@ -17,7 +17,7 @@ namespace AndroidHelper
     public class CardRecyclerHelper : RecyclerView.Adapter
     {
         private CardListHelper<CardViewHelper> Cards;
-        private const string FontAwesomFilename = "FontAwesome.ttf";
+        //private const string FontAwesomFilename = "FontAwesome.ttf";
         private RecyclerView mRecyclerView;
 
         public CardRecyclerHelper(CardListHelper<CardViewHelper> ncards, RecyclerView recyclerView)
@@ -43,9 +43,6 @@ namespace AndroidHelper
             myHolder.tvTitle.Text = Cards[IndexPosition].Title;
             myHolder.tvSubTitle.Text = Cards[IndexPosition].SubTitle;
             myHolder.tvTime.Text = Cards[IndexPosition].Time;
-
-            
-     
         }
 
        
@@ -55,16 +52,17 @@ namespace AndroidHelper
             View row = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.CardView_proto,parent,false);
 
             TextView Title = row.FindViewById<TextView>(Resource.Id.cardview_textView_main);
-            TextView Subtitle = row.FindViewById<TextView>(Resource.Id.cardview_textView_subtitle);//sum ting wong
+            TextView Subtitle = row.FindViewById<TextView>(Resource.Id.cardview_textView_sub);//sum ting wong
             TextView Time = row.FindViewById<TextView>(Resource.Id.cardview_textView_timestamp);
 
-            Button buttonCheck = row.FindViewById<Button>(Resource.Id.cardview_button_check);
-            Button buttonTrash = row.FindViewById<Button>(Resource.Id.cardview_button_trash);
+            //temporary disable buttons
+            //Button buttonCheck = row.FindViewById<Button>(Resource.Id.cardview_button_check);
+            //Button buttonTrash = row.FindViewById<Button>(Resource.Id.cardview_button_trash);
 
-            //enable fontawesome
-            Typeface font = Typeface.CreateFromAsset(Application.Context.Assets, FontAwesomFilename );
-            buttonCheck.SetTypeface(font, TypefaceStyle.Normal);
-            buttonTrash.SetTypeface(font, TypefaceStyle.Normal);
+            ////enable fontawesome
+            //Typeface font = Typeface.CreateFromAsset(Application.Context.Assets, FontAwesomFilename );
+            //buttonCheck.SetTypeface(font, TypefaceStyle.Normal);
+            //buttonTrash.SetTypeface(font, TypefaceStyle.Normal);
 
             MyView view = new MyView(row)
             {
@@ -81,8 +79,7 @@ namespace AndroidHelper
         private void MMainView_Click(object sender, EventArgs e)
         {
             int IndexPosition = (Cards.Count - 1) - mRecyclerView.GetChildPosition((View)sender);
-            Console.WriteLine("  1pos: " + Cards[IndexPosition].Title);
-
+            //Console.WriteLine("  1pos: " + Cards[IndexPosition].Title);
             Cards.RemoveSpecific(Cards[IndexPosition]);
             Toast.MakeText(Application.Context, string.Format("card {0} is removed", IndexPosition), ToastLength.Short);
         }
@@ -93,8 +90,8 @@ namespace AndroidHelper
             public TextView tvTitle { get; set; }
             public TextView tvSubTitle { get; set; }
             public TextView tvTime { get; set; }
-            public Button btnCheck { get; set; }
-            public Button btnTrash { get; set; }
+            //public Button btnCheck { get; set; }
+            //public Button btnTrash { get; set; }
 
             public  MyView(View view) : base(view)
             {
