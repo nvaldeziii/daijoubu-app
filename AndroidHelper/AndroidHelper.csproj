@@ -56,11 +56,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardListHelper.cs" />
+    <Compile Include="CardviewCoverAnimation.cs" />
     <Compile Include="CardViewHelper.cs" />
     <Compile Include="FragmentHelper.cs" />
     <Compile Include="ListViewAdapter.cs" />
     <Compile Include="MyActionBarDrawerToggle.cs" />
     <Compile Include="CardRecyclerHelper.cs" />
+    <Compile Include="RecyclerViewScrollListener.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringHelper.cs" />
@@ -84,7 +86,9 @@
     <Folder Include="Resources\Assets\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Values\Styles.xml" />
+    <AndroidResource Include="Resources\Values\Styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\button_circle_states.xml">

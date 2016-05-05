@@ -5,14 +5,16 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-    android:background="@android:color/holo_red_dark">
+    android:background="@android:color/holo_red_dark"
+    android:id="@+id/layout_home">
 <!-- Top Cover -->
     <RelativeLayout
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000">
+        android:background="#000"
+        android:id="@+id/layout_home_reltopcover">
         <ImageView
             android:src="@drawable/home_cover_free"
             android:layout_width="match_parent"
@@ -121,15 +123,17 @@
         </RelativeLayout>
     </LinearLayout>
     <View
-        style="@style/LayoutSeparator" />
+        style="@style/LayoutSeparator"
+        android:id="@+id/view_home_layoutseparator1" />
     <Button
         android:text="Add Card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button_addcard" />
     <android.support.v7.widget.RecyclerView
+        android:background="#000"
         android:id="@+id/layout_main_recycler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:scrollbars="vertical" />
 </LinearLayout>
